@@ -26,6 +26,7 @@ return {
             }
         },
         filters = {
+            enable = true,
             git_ignored = true,
             dotfiles = false,
             git_clean = false,
