@@ -24,7 +24,7 @@ return {
             formatters = {
                 prettier = {
                     prepend_args = { "--single-quote", "--trailing-comma", "all", "--tab-width", "4" },
-                }
+                },
             }
         })
 

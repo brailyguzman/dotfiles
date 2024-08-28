@@ -46,6 +46,18 @@ return {
                     require('lspconfig').emmet_ls.setup({
                         filetypes = { "css", "eruby", "html", "javascript", "javascriptreact", "less", "sass", "scss", "svelte", "pug", "typescriptreact", "vue", "liquid" },
                     })
+                end,
+                clangd = function()
+                    require('lspconfig').clangd.setup({
+                        cmd = {
+                            "clangd",
+                            "--background-index",
+                            "--suggest-missing-includes",
+                            "--clang-tidy",
+                            "--header-insertion=iwyu",
+                            "--fallback-style=none", -- Only look for .clang_format file
+                        },
+                    })
                 end
             },
         })
