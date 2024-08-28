@@ -62,7 +62,7 @@ return {
             }
         },
         renderer = {
-            root_folder_label = false,
+            root_folder_label = ":~:s?$?/..?",
             highlight_git = false,
             highlight_opened_files = "none",
 
@@ -75,7 +75,7 @@ return {
                     file = true,
                     folder = true,
                     folder_arrow = true,
-                    git = false
+                    git = true,
                 },
 
                 glyphs = {
