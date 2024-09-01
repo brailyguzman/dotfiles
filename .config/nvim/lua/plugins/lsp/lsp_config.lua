@@ -28,7 +28,6 @@ return {
             lsp_zero.default_keymaps({ buffer = bufnr })
         end)
 
-
         require('mason').setup({
             ui = {
                 icons = {
@@ -47,6 +46,7 @@ return {
                         filetypes = { "css", "eruby", "html", "javascript", "javascriptreact", "less", "sass", "scss", "svelte", "pug", "typescriptreact", "vue", "liquid" },
                     })
                 end,
+
                 clangd = function()
                     require('lspconfig').clangd.setup({
                         cmd = {
@@ -60,6 +60,16 @@ return {
                     })
                 end
             },
+        })
+
+        -- This prevents diagnostics from going away when we are on Insert mode.
+        vim.diagnostic.config({
+            virtual_text = true,
+            signs = true,
+            update_in_insert = true,
+            underline = true,
+            severity_sort = false,
+            float = true,
         })
 
         local cmp = require('cmp')
