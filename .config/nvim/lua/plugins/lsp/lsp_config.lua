@@ -58,6 +58,10 @@ return {
                             "--fallback-style=none", -- Only look for .clang_format file
                         },
                     })
+                end,
+
+                tsserver = function()
+                    require("lspconfig").ts_ls.setup({})
                 end
             },
         })
