@@ -38,7 +38,7 @@ return {
             }
         })
         require('mason-lspconfig').setup({
-            ensure_installed = { "lua_ls", "tsserver", "html", "cssls", "jsonls", "pyright", "gopls", "clangd", "rust_analyzer", "emmet_ls", "eslint" },
+            ensure_installed = { "lua_ls", "ts_ls", "html", "cssls", "jsonls", "pyright", "gopls", "clangd", "rust_analyzer", "emmet_ls", "eslint" },
             handlers = {
                 lsp_zero.default_setup,
                 emmet_ls = function()
@@ -59,10 +59,6 @@ return {
                         },
                     })
                 end,
-
-                tsserver = function()
-                    require("lspconfig").ts_ls.setup({})
-                end
             },
         })
 
