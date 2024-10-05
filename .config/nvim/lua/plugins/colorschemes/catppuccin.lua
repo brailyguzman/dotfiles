@@ -36,11 +36,11 @@ return {
                 -- miscs = {}, -- Uncomment to turn off hard-coded styles
             },
             color_overrides = {
-                mocha = {
-                    base = "#0B0C10",
-                    mantle = "#0B0C10",
-                    crust = "#0B0C10",
-                },
+                -- mocha = {
+                --     base = "#0B0C10",
+                --     mantle = "#0B0C10",
+                --     crust = "#0B0C10",
+                -- },
             },
             custom_highlights = {},
             default_integrations = true,
@@ -59,6 +59,6 @@ return {
         })
 
         -- setup must be called before loading
-        -- vim.cmd.colorscheme "catppuccin"
+        vim.cmd.colorscheme "catppuccin"
     end
 }
