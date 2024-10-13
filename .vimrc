@@ -93,3 +93,6 @@ set mouse=a           " Enable mouse in all modes
 
 " Prevent bad line breaks
 set linebreak
+
+" Transparent .vimrc
+highlight Normal guibg=NONE ctermbg=NONE
