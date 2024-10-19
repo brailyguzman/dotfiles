@@ -1,5 +1,18 @@
 # Braily's Dotfiles
 
+## Stow
+Once this repository is cloned and is on `~/dotfiles`
+Run the following command to set up GNU Stow.
+
+`stow ~/dotfiles`
+
+If you already have a .zshrc file, run the following command to create a backup of the old file.
+```
+mv ~/.zshrc ~/.zshrc.bak
+```
+And now, we can run the following command:
+`stow ~/dotfiles`
+
 ## VIM
 
 ### ~ Install Vim-Plug
