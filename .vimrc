@@ -3,8 +3,8 @@
 " ==============================================
 call plug#begin('~/.vim/plugged')
 
-" Modern colorscheme - OneDark
-Plug 'joshdick/onedark.vim'
+" Modern colorscheme - Catppuccin
+Plug 'catppuccin/vim', { 'as': 'catppuccin' }
 
 " Status bar plugin
 Plug 'itchyny/lightline.vim'
@@ -68,13 +68,13 @@ set foldlevelstart=99  " Start with folds open by default
 " ==============================================
 " UI Enhancements
 " ==============================================
-" Use the OneDark colorscheme
-colorscheme onedark
+" Use the Catppuccin Mocha colorscheme
+colorscheme catppuccin_mocha
+let g:lightline = {'colorscheme': 'catppuccin_mocha'}
 
 " Status bar: Enable lightline for better visibility
 set laststatus=2
 set noshowmode   " Don't display mode, lightline does it
-let g:lightline = { 'colorscheme': 'onedark' }
 
 " ==============================================
 " Performance Tweaks
