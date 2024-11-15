@@ -91,5 +91,9 @@ echo "Symlinking dotfiles using stow..."
 cd "$DOTFILES_DIR"
 stow .
 
+# Setup Node and NPM
+echo "Setting up Node and NPM..."
+nvm install --lts && npm install -g npm@latest typescript yarn nodemon
+
 # Final message
 echo "Setup complete! Restart your terminal or run 'exec zsh' to apply changes."
