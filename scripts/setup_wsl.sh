@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Create directories in the Home folder
+echo "Creating default directories in the Home folder..."
+cd ~ && mkdir -p Documents Downloads Repos Work Development
+
 # Update and upgrade system
 echo "Updating and upgrading system..."
 sudo apt update && sudo apt upgrade -y
@@ -67,7 +71,7 @@ read -p "Press Enter once you have added the SSH key to your Git hosting service
 
 # Clone and set up dotfiles
 DOTFILES_REPO="git@github.com:brailyguzman/dotfiles.git"
-DOTFILES_DIR="$HOME/dotfiles"
+DOTFILES_DIR="$HOME/Dotfiles"
 
 if [ ! -d "$DOTFILES_DIR" ]; then
     echo "Cloning dotfiles repository..."
