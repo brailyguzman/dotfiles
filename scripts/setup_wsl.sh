@@ -52,10 +52,12 @@ fi
 echo "Installing additional packages..."
 brew install llvm python neovim tmux fastfetch htop btop ripgrep lazygit go stow
 
+EMAIL="brailyg@outlook.com"
+
 # Setting up Git SSH key
 echo "Setting up Git SSH key..."
 if [ ! -f "$HOME/.ssh/id_ed25519" ]; then
-    ssh-keygen -t ed25519 -C "your_email@example.com" -f "$HOME/.ssh/id_ed25519" -q -N ""
+    ssh-keygen -t ed25519 -C "$EMAIL" -f "$HOME/.ssh/id_ed25519" -q -N ""
     echo "SSH key generated successfully!"
 else
     echo "SSH key already exists. Skipping key generation."
