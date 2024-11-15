@@ -109,6 +109,8 @@ OS_TYPE=$(uname)
 if [ "$OS_TYPE" = "Darwin" ]; then
     # macOS-specific configurations
     source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+    # node
+    export PATH="/usr/local/opt/node@22/bin:$PATH"
 else
     # Linux-specific configurations
     eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
