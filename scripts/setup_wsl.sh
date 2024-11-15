@@ -73,7 +73,7 @@ read -p "Press Enter once you have added the SSH key to your Git hosting service
 
 # Clone and set up dotfiles
 DOTFILES_REPO="git@github.com:brailyguzman/dotfiles.git"
-DOTFILES_DIR="$HOME/Dotfiles"
+DOTFILES_DIR="$HOME/dotfiles"
 
 if [ ! -d "$DOTFILES_DIR" ]; then
     echo "Cloning dotfiles repository..."
