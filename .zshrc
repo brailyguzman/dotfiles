@@ -108,10 +108,6 @@ OS_TYPE=$(uname)
 
 if [ "$OS_TYPE" = "Darwin" ]; then
     # macOS-specific configurations
-    export NVM_DIR="$HOME/.nvm"
-    [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-    [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
-
     source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 else
     # Linux-specific configurations
