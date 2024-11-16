@@ -103,6 +103,14 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Make neovim the default editor
+export EDITOR="nvim"
+export VISUAL="nvim"
+
+# Aliases for nvim
+alias vi="nvim"
+alias vim="nvim"
+
 # Detect the OS
 OS_TYPE=$(uname)
 
