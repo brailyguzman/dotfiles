@@ -1,5 +1,8 @@
 [user]
 	name = Braily Guzman
     email = brailyg@outlook.com
+	signingkey = 7FFC3514AA4EDB4D
 [pull]
     rebase = false
+[commit]
+	gpgsign = true
