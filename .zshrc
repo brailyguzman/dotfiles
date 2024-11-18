@@ -1,5 +1,10 @@
 eval "$(starship init zsh)"
 
+# Colors
+unset LSCOLORS
+export CLICOLOR=1
+export CLICOLOR_FORCE=1
+
 # Make neovim the default editor
 export EDITOR="nvim"
 export VISUAL="nvim"
