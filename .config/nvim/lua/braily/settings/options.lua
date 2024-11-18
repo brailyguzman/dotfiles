@@ -4,7 +4,7 @@
 vim.opt.guicursor = "n-v-c:block,i:ver100,r-cr:hor20,o:hor50"
 
 -- wrap line
-vim.opt.wrap = false
+vim.opt.wrap = true
 
 -- clipboard
 vim.opt.clipboard = "unnamedplus"
