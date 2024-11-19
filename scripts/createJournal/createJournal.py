@@ -14,9 +14,6 @@ def main():
 
         with open(journal_file, "w") as f:
             f.write(template)
-            print(f"Created new journal entry: {journal_file}")
-    else:
-        print(f"Journal entry for today already exists: {journal_file}")
 
     os.system(f"nvim {journal_file}")
 
