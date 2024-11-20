@@ -54,3 +54,7 @@ vim.opt.scrolloff = 8
 
 -- Remove tilde (~)
 vim.opt.fillchars = { eob = " " }
+
+-- Spelling
+vim.opt.spell = true
+vim.opt.spelllang = 'en_us'
