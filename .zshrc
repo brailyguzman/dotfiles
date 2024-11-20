@@ -15,6 +15,7 @@ alias vim="nvim"
 
 # Aliases for scripts
 alias journal="python3 ~/scripts/createJournal/createJournal.py"
+alias todos="nvim ~/SecondBrain/todos.md"
 
 # Detect the OS
 OS_TYPE=$(uname)
