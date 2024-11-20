@@ -28,7 +28,7 @@ return {
 		filters = {
 			enable = true,
 			git_ignored = true,
-			dotfiles = false,
+			dotfiles = true,
 			git_clean = false,
 			no_buffer = false,
 			custom = { "^.git$" },
