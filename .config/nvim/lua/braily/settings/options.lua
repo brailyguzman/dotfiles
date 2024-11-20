@@ -51,3 +51,6 @@ vim.opt.signcolumn = "yes"
 
 -- Scroll off
 vim.opt.scrolloff = 8
+
+-- Remove tilde (~)
+vim.opt.fillchars = { eob = " " }
