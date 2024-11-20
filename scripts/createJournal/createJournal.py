@@ -11,7 +11,6 @@ def main():
     os.makedirs(journal_dir, exist_ok=True)
 
     if not os.path.exists(journal_file):
-
         with open(journal_file, "w") as f:
             f.write(template)
 

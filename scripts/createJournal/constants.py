@@ -7,32 +7,43 @@ month_str = today.strftime("%m-%B")
 year_str = today.strftime("%Y")
 
 template = f"""\
-# Journal for {date_str}
+# Journal for 2024-11-20
 
-## 🙏 Gratitude
+## Intention
+
+My focus for today is:
+
+## Gratitude
+
+Today, I'm grateful for:
 
 -
 -
 -
 
-## 🎯 Intention for Today
+## Declaration
+
+Today, I will get 1% better by:
+
+## Journal Entry
 
 -
 
-## ✅ Top 3 Priorities
+## Top 3 Priorities
 
 1.
 2.
 3.
 
-## 📝 Tasks
+## Tasks
 
 -   [ ]
 -   [ ]
 -   [ ]
 
-## 💡 Reflections
+## Reflections
 
 -   What went well:
 -   What could be improved:
+
 """
