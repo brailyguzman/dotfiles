@@ -7,7 +7,7 @@ month_str = today.strftime("%m-%B")
 year_str = today.strftime("%Y")
 
 template = f"""\
-# Journal for 2024-11-20
+# Journal for {date_str}
 
 ## Intention
 
