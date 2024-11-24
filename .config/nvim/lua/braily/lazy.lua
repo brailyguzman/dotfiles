@@ -26,7 +26,6 @@ require("lazy").setup({
 		{ import = "plugins.colorschemes" },
 		{ import = "plugins.search" },
 		{ import = "plugins.syntax" },
-		{ import = "plugins.formatter" },
 		{ import = "plugins.utils" },
 	},
 	-- Configure any other settings here. See the documentation for more details.
