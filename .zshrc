@@ -13,10 +13,6 @@ export VISUAL="nvim"
 alias vi="nvim"
 alias vim="nvim"
 
-# Aliases for scripts
-alias journal="python3 ~/scripts/journal/journal.py"
-alias todos="python3 ~/scripts/todos/todos.py"
-
 # Detect the OS
 OS_TYPE=$(uname)
 
