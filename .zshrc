@@ -1,9 +1,8 @@
-eval "$(starship init zsh)"
-
-# Colors
-unset LSCOLORS
-export CLICOLOR=1
-export CLICOLOR_FORCE=1
+# OMZ Setup
+export ZSH="$HOME/.oh-my-zsh"
+ZSH_THEME="robbyrussell"
+plugins=(git)
+source $ZSH/oh-my-zsh.sh
 
 # Make neovim the default editor
 export EDITOR="nvim"
@@ -12,6 +11,9 @@ export VISUAL="nvim"
 # Aliases for nvim
 alias vi="nvim"
 alias vim="nvim"
+
+# Useful
+alias reload="source ~/.zshrc"
 
 # Detect the OS
 OS_TYPE=$(uname)
