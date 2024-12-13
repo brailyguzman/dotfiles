@@ -2,6 +2,12 @@ return {
 	"nvim-lualine/lualine.nvim",
 	dependencies = { "nvim-tree/nvim-web-devicons" },
 	config = function()
+        local mode = {
+            'mode',
+            fmt = function(str)
+                return ' ' .. str
+            end,
+        }
 		require("lualine").setup({
 			options = {
 				icons_enabled = true,
@@ -23,7 +29,7 @@ return {
 				},
 			},
 			sections = {
-				lualine_a = { "mode" },
+				lualine_a = { mode },
 				lualine_b = { "branch", "diff", "diagnostics" },
 				lualine_c = { "filename" },
 				lualine_x = { "encoding", "fileformat", "filetype" },
