@@ -26,8 +26,6 @@ brew "postgresql@14", restart_service: true
 brew "python@3.13"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
-# Cross-shell prompt for astronauts
-brew "starship"
 # Organize software neatly under a single directory tree (e.g. /usr/local)
 brew "stow"
 # Terminal multiplexer
@@ -36,10 +34,6 @@ brew "tmux"
 brew "tree"
 # Internet file retriever
 brew "wget"
-# Fish-like fast/unobtrusive autosuggestions for zsh
-brew "zsh-autosuggestions"
-# Fish shell like syntax highlighting for zsh
-brew "zsh-syntax-highlighting"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
 # Menu bar tool to limit maximum charging percentage
@@ -50,6 +44,8 @@ cask "appcleaner"
 cask "discord"
 # Collaborative team software
 cask "figma"
+cask "font-blex-mono-nerd-font"
+cask "font-jetbrains-mono-nerd-font"
 # Web browser
 cask "google-chrome"
 # Tools to protect your emails and files
