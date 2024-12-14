@@ -56,6 +56,8 @@ cask "grammarly-desktop"
 cask "hiddenbar"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
+# GPU-based terminal emulator
+cask "kitty"
 # Calendar for professionals and teams
 cask "notion-calendar"
 # Knowledge base that works on top of a local folder of plain text Markdown files
