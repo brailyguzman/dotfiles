@@ -6,6 +6,8 @@ brew "bat"
 brew "cmake"
 # Modern, maintained replacement for ls
 brew "eza"
+# Fast and simple Node.js version manager
+brew "fnm"
 # Command-line fuzzy finder written in Go
 brew "fzf"
 # GNU compiler collection
@@ -32,6 +34,8 @@ brew "stow"
 brew "tmux"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
+# Watch files and take action when they change
+brew "watchman"
 # Internet file retriever
 brew "wget"
 # Password manager that keeps all passwords secure behind one password
