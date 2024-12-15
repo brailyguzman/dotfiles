@@ -45,7 +45,7 @@ return {
 		},
 		view = {
 			adaptive_size = false,
-			side = "left",
+			side = "right",
 			width = 35,
 			signcolumn = "yes",
 			preserve_window_proportions = true,
