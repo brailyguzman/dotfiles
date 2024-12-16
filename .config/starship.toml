@@ -14,9 +14,6 @@ disabled = false
 success_symbol = "[λ](bold green)"
 error_symbol = "[λ](bold red)"
 
-[cmd_duration]
-min_time = 10_000
-
 [aws]
 symbol = "  "
 
@@ -103,7 +100,7 @@ symbol = "󰆥 "
 symbol = " "
 
 [nodejs]
-symbol = " "
+symbol = " "
 
 [ocaml]
 symbol = " "
