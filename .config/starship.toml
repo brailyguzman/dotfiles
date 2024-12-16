@@ -1,5 +1,5 @@
 # No new line
-add_newline = true
+add_newline = false
 
 # A minimal left prompt
 format = """
