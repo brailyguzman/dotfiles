@@ -20,14 +20,14 @@ brew "htop"
 brew "lazygit"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
-# Manage multiple Node.js versions
-brew "nvm"
 # Object-relational database system
 brew "postgresql@14", restart_service: true
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.13"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
+# Cross-shell prompt for astronauts
+brew "starship"
 # Organize software neatly under a single directory tree (e.g. /usr/local)
 brew "stow"
 # Terminal multiplexer
@@ -44,28 +44,28 @@ cask "1password"
 cask "aldente"
 # Application uninstaller
 cask "appcleaner"
+# Web browser focusing on privacy
+cask "brave-browser"
 # Voice and text chat software
 cask "discord"
 # Collaborative team software
 cask "figma"
 cask "font-blex-mono-nerd-font"
 cask "font-jetbrains-mono-nerd-font"
-# Web browser
-cask "google-chrome"
 # Tools to protect your emails and files
 cask "gpg-suite"
 # Grammarly for desktop
 cask "grammarly-desktop"
 # Utility to hide menu bar items
 cask "hiddenbar"
-# Terminal emulator as alternative to Apple's Terminal app
-cask "iterm2"
 # GPU-based terminal emulator
 cask "kitty"
 # Calendar for professionals and teams
 cask "notion-calendar"
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
+# Collaboration platform for API development
+cask "postman"
 # Control your tools with a few keystrokes
 cask "raycast"
 # Move and resize windows using keyboard shortcuts or snap areas
@@ -76,3 +76,5 @@ cask "slack"
 cask "spotify"
 # Open-source code editor
 cask "visual-studio-code"
+# Video communication and virtual meeting platform
+cask "zoom"
