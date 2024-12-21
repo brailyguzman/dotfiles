@@ -3,7 +3,9 @@ add_newline = false
 
 # A minimal left prompt
 format = """
-$all\
+$directory\
+$git_branch\
+$git_state\
 $line_break\
 $character"""
 
