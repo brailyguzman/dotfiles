@@ -50,7 +50,6 @@ cask "brave-browser"
 cask "discord"
 # Collaborative team software
 cask "figma"
-cask "font-blex-mono-nerd-font"
 cask "font-jetbrains-mono-nerd-font"
 # Tools to protect your emails and files
 cask "gpg-suite"
