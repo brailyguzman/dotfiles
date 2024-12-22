@@ -10,3 +10,4 @@ raycast/
 alacritty.yml
 .DS_Store
 yarn/
+.config/zed/prompts
