@@ -2,7 +2,7 @@
 add_newline = false
 
 # A minimal left prompt
-format = """[➜](bold cyan) \
+format = """[λ](bold cyan) \
 $directory\
 $git_branch\
 $git_state\
@@ -12,8 +12,8 @@ $character"""
 disabled = true
 
 [character]
-success_symbol = "[❯](bold cyan)"
-error_symbol = "[❯](bold red)"
+success_symbol = "[>](bold cyan)"
+error_symbol = "[>](bold red)"
 
 [aws]
 symbol = "  "
