@@ -1,0 +1,33 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+    {
+        "context": "Workspace",
+        "bindings": {
+            // "shift shift": "file_finder::Toggle"
+        }
+    },
+    {
+        "context": "Terminal",
+        "bindings": {
+            "ctrl-w": "pane::CloseActiveItem", // Don't pass ctrl-w to terminal, let Zed handle it.
+            "ctrl-`": "workspace::ToggleBottomDock" // match vscode behavior
+        }
+    },
+    {
+        "context": "vim_mode == normal",
+        "bindings": {
+            "H": "pane::ActivatePrevItem", // Go to the previous buffer on the current pane
+            "L": "pane::ActivateNextItem", // Go to the next buffer on the current pane
+            "space w v": "pane::SplitVertical", // Split vertically the current pane
+            "space w s": "pane::SplitHorizontal", // Split horizontally the current pane
+            "ctrl-h": "workspace::ActivatePreviousPane", // Go to the previous pane
+            "ctrl-l": "workspace::ActivateNextPane" // Go to the next pane
+        }
+    }
+]
