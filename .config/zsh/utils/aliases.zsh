@@ -1,3 +1,10 @@
+# Brew
+alias update="brew update"
+alias upgrade="brew upgrade"
+alias cleanup="brew cleanup"
+alias dump="brew bundle dump --casks --taps --brews --describe --force"
+alias uucd="update && upgrade && cleanup && dump" # U: Update | U: Upgrade | C: Cleanup | D: Dump
+
 # Neovim
 alias vi="nvim"
 alias vim="nvim"
@@ -11,7 +18,6 @@ alias la="eza --all --icons --group --header"
 # Misc
 alias reload="source ~/.zshrc"
 alias playground="cd ~/Developer/Playground"
-alias dump="brew bundle dump --casks --taps --brews --describe --force"
 alias lg="lazygit"
 alias cat="bat --paging=never"
 alias tree="tree -C"
