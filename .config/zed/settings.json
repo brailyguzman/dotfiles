@@ -7,21 +7,15 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-    // "collaboration_panel": {
-    //     "dock": "right"
-    // },
-    // "outline_panel": {
-    //     "dock": "right"
-    // },
-    // "project_panel": {
-    //     "dock": "right"
-    // },
+    "project_panel": {
+        "dock": "right"
+    },
     "ui_font_size": 18,
     "buffer_font_size": 16,
     "theme": {
         "mode": "system",
         "light": "One Light",
-        "dark": "Catppuccin Mocha"
+        "dark": "Catppuccin Espresso (Blur)"
     },
     "vim_mode": true,
     "base_keymap": "VSCode",
@@ -31,6 +25,7 @@
         "git_status": true,
         "show_diagnostics": "all"
     },
+    "relative_line_numbers": true,
     "autosave": "on_focus_change",
     "format_on_save": "on",
     "terminal": {
@@ -41,5 +36,8 @@
     "buffer_font_family": "JetBrainsMono Nerd Font",
     "vim": {
         "use_system_clipboard": "always"
+    },
+    "experimental.theme_overrides": {
+        "border": "#2B2B2B"
     }
 }
