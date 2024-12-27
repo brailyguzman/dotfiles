@@ -51,14 +51,14 @@ cask "discord"
 # Collaborative team software
 cask "figma"
 cask "font-jetbrains-mono-nerd-font"
+# Terminal emulator that uses platform-native UI and GPU acceleration
+cask "ghostty"
 # Tools to protect your emails and files
 cask "gpg-suite"
 # Grammarly for desktop
 cask "grammarly-desktop"
 # Utility to hide menu bar items
 cask "hiddenbar"
-# GPU-based terminal emulator
-cask "kitty"
 # Calendar for professionals and teams
 cask "notion-calendar"
 # Knowledge base that works on top of a local folder of plain text Markdown files
