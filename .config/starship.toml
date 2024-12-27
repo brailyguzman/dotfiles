@@ -2,14 +2,15 @@
 add_newline = false
 
 # A minimal left prompt
-format = """[λ](bold cyan) \
+format = """
 $directory\
 $git_branch\
 $git_state\
+$line_break\
 $character"""
 
 [line_break]
-disabled = true
+disabled = false
 
 [character]
 success_symbol = "[>](bold cyan)"
@@ -36,8 +37,6 @@ symbol = " "
 [directory]
 read_only = " 󰌾"
 style = "blue bold"
-truncation_length = 1
-truncation_symbol = ""
 
 [docker_context]
 symbol = " "
