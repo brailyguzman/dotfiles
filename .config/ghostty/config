@@ -12,9 +12,9 @@ window-padding-y = 8
 macos-titlebar-style = "tabs"
 
 # Cursor
+shell-integration-features = no-cursor
 cursor-style = "block"
 cursor-style-blink = true
-shell-integration-features = no-cursor
 
 # Colors
 palette = 0=#45475a
