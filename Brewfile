@@ -1,5 +1,6 @@
 tap "homebrew/bundle"
 tap "homebrew/services"
+tap "mongodb/brew"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
 # Cross-platform make
@@ -38,6 +39,8 @@ brew "tree"
 brew "watchman"
 # Internet file retriever
 brew "wget"
+# High-performance, schema-free, document-oriented database
+brew "mongodb/brew/mongodb-community"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
 # Menu bar tool to limit maximum charging percentage
@@ -48,6 +51,8 @@ cask "appcleaner"
 cask "brave-browser"
 # Voice and text chat software
 cask "discord"
+# Online diagram software
+cask "drawio"
 # Collaborative team software
 cask "figma"
 cask "font-jetbrains-mono-nerd-font"
