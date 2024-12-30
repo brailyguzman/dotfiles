@@ -1,5 +1,5 @@
 # Font
-font-family = "JetBrainsMono Nerd Font"
+font-family = "BlexMono Nerd Font"
 font-size = 18
 
 # Window
@@ -16,6 +16,7 @@ macos-titlebar-style = "tabs"
 shell-integration-features = no-cursor
 cursor-style = "block"
 cursor-style-blink = true
+mouse-hide-while-typing
 
 # Colors
 palette = 0=#45475a
