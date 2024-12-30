@@ -3,8 +3,8 @@
 -- Cursor
 vim.opt.guicursor = "n-v-c:block,i:ver100,r-cr:hor20,o:hor50"
 
--- wrap line
-vim.opt.wrap = true
+-- disable wrap line
+vim.opt.wrap = false
 
 -- line break
 vim.opt.linebreak = true
@@ -54,3 +54,6 @@ vim.opt.scrolloff = 8
 
 -- Remove tilde (~)
 vim.opt.fillchars = { eob = " " }
+
+vim.opt.conceallevel = 2
+vim.opt.concealcursor = "n"

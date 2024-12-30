@@ -24,7 +24,6 @@ require("lazy").setup({
 	spec = {
 		{ import = "plugins.ui" },
 		{ import = "plugins.colorschemes" },
-		{ import = "plugins.search" },
 		{ import = "plugins.syntax" },
 		{ import = "plugins.utils" },
 	},
