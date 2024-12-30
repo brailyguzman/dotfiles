@@ -2,21 +2,22 @@ return {
 	"nvim-lualine/lualine.nvim",
 	dependencies = { "nvim-tree/nvim-web-devicons" },
 	config = function()
-        local mode = {
-            'mode',
-            fmt = function(str)
-                return ' ' .. str
-            end,
-        }
+		local mode = {
+			"mode",
+			fmt = function(str)
+				return " " .. str
+			end,
+		}
+
 		require("lualine").setup({
 			options = {
 				icons_enabled = true,
 				theme = "auto",
-				component_separators = { left = "", right = "" },
-				section_separators = { left = "", right = "" },
+				component_separators = { left = "", right = "" },
+				section_separators = { left = "", right = "" },
 				disabled_filetypes = {
-					statusline = {},
-					winbar = {},
+					"NvimTree",
+					"TelescopePrompt",
 				},
 				ignore_focus = {},
 				always_divide_middle = true,
