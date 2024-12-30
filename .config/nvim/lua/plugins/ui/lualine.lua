@@ -13,12 +13,9 @@ return {
 			options = {
 				icons_enabled = true,
 				theme = "auto",
-				component_separators = { left = "", right = "" },
-				section_separators = { left = "", right = "" },
-				disabled_filetypes = {
-					"NvimTree",
-					"TelescopePrompt",
-				},
+				component_separators = "|",
+				section_separators = { left = "", right = "" },
+				disabled_filetypes = {},
 				ignore_focus = {},
 				always_divide_middle = true,
 				always_show_tabline = true,

@@ -28,6 +28,5 @@ return {
 	},
 	config = function(_, opts)
 		require("ibl").setup(opts)
-		-- vim.api.nvim_set_hl(0, "IblIndent", { fg = "#45475a", nocombine = true })
 	end,
 }

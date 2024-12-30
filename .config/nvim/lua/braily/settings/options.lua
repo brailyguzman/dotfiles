@@ -1,7 +1,8 @@
 -- Here we store our custom vim options
 
 -- Cursor
-vim.opt.guicursor = "n-v-c:block,i:ver100,r-cr:hor20,o:hor50"
+vim.opt.guicursor =
+	"n-v-c:block-blinkon100-blinkoff100-blinkwait200,i:ver100-blinkon100-blinkoff100-blinkwait200,r-cr:hor20-blinkon100-blinkoff100-blinkwait200,o:hor50-blinkon100-blinkoff100-blinkwait200"
 
 -- disable wrap line
 vim.opt.wrap = false

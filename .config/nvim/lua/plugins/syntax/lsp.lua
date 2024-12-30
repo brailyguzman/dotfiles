@@ -5,13 +5,33 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 	},
 	config = function()
-		local servers = { "lua_ls", "gopls", "ts_ls", "cssls", "html", "pyright", "bashls", "clangd" }
-		local other = { "cspell", "prettier", "isort" }
+		local servers =
+			{ "lua_ls", "gopls", "ts_ls", "cssls", "html", "jsonls", "emmet_ls", "pyright", "bashls", "clangd" }
 
 		require("mason").setup()
 		require("mason-lspconfig").setup({
 			ensure_installed = servers,
-			other,
+			handlers = {
+				emmet_ls = function()
+					require("lspconfig").emmet_ls.setup({
+						filetypes = {
+							"css",
+							"eruby",
+							"html",
+							"javascript",
+							"javascriptreact",
+							"less",
+							"sass",
+							"scss",
+							"svelte",
+							"pug",
+							"typescriptreact",
+							"vue",
+							"liquid",
+						},
+					})
+				end,
+			},
 		})
 
 		require("luasnip.loaders.from_vscode").lazy_load({ paths = { "~/.config/nvim/snippets/" } })
