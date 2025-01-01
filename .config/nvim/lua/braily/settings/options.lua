@@ -58,3 +58,6 @@ vim.opt.fillchars = { eob = " " }
 
 vim.opt.conceallevel = 2
 vim.opt.concealcursor = "n"
+
+-- Completion options
+vim.o.completeopt = "menuone,noselect"
