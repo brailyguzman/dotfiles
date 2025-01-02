@@ -1,14 +1,14 @@
 -- Here we store our keymaps
 
 -- Switch to the next buffer
-vim.api.nvim_set_keymap("n", "<leader>o", ":bnext<CR>", {
+vim.api.nvim_set_keymap("n", "H", ":bnext<CR>", {
 	noremap = true,
 	silent = true,
 	desc = "Next Buffer",
 })
 
 -- Switch to the previous buffer
-vim.api.nvim_set_keymap("n", "<leader>e", ":bprev<CR>", {
+vim.api.nvim_set_keymap("n", "L", ":bprev<CR>", {
 	noremap = true,
 	silent = true,
 	desc = "Previous Buffer",
