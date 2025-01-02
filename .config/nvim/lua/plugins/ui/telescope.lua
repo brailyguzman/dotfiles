@@ -11,7 +11,7 @@ return {
 		vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Telescope buffers" })
 		vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Telescope help tags" })
 
-		function telescope_image_preview()
+		local telescope_image_preview = function()
 			local supported_images = { "svg", "png", "jpg", "jpeg", "gif", "webp", "avif" }
 			local from_entry = require("telescope.from_entry")
 			local Path = require("plenary.path")

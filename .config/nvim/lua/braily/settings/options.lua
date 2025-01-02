@@ -2,7 +2,7 @@
 
 -- Cursor
 vim.opt.guicursor =
-	"n-v-c:block-blinkon100-blinkoff100-blinkwait200,i:ver100-blinkon100-blinkoff100-blinkwait200,r-cr:hor20-blinkon100-blinkoff100-blinkwait200,o:hor50-blinkon100-blinkoff100-blinkwait200"
+"n-v-c:block-blinkon100-blinkoff100-blinkwait200,i:ver100-blinkon100-blinkoff100-blinkwait200,r-cr:hor20-blinkon100-blinkoff100-blinkwait200,o:hor50-blinkon100-blinkoff100-blinkwait200"
 
 -- disable wrap line
 vim.opt.wrap = false
@@ -60,4 +60,7 @@ vim.opt.conceallevel = 2
 vim.opt.concealcursor = "n"
 
 -- Completion options
-vim.o.completeopt = "menuone,noselect"
+vim.o.completeopt = "menu,menuone,noinsert,noselect"
+
+vim.opt.spell = true
+vim.opt.spelllang = "en_us"
