@@ -8,9 +8,10 @@ return {
 		"hrsh7th/cmp-nvim-lsp",
 		"hrsh7th/cmp-buffer",
 		"hrsh7th/cmp-path",
-		"hrsh7th/cmp-cmdline",
 		"hrsh7th/nvim-cmp",
+		"hrsh7th/cmp-nvim-lsp-signature-help",
 		"onsails/lspkind.nvim",
+		"MeanderingProgrammer/render-markdown.nvim",
 
 		-- snippets
 		{
@@ -95,7 +96,10 @@ return {
 			}),
 			sources = cmp.config.sources({
 				{ name = "nvim_lsp" },
+				{ name = "nvim_lsp_signature_help" },
+				{ name = "path" },
 				{ name = "luasnip" },
+				{ name = "render-markdown" },
 			}, {
 				{ name = "buffer" },
 			}),
@@ -108,5 +112,17 @@ return {
 				capabilities = capabilities,
 			})
 		end
+
+		lspconfig.marksman.setup({
+			cmd = { "marksman", "server" },
+			filetypes = { "markdown" },
+			settings = {
+				marksman = {
+					lint = true,
+					completion = true,
+					hover = true,
+				},
+			},
+		})
 	end,
 }
