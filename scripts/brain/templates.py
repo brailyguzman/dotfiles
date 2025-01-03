@@ -1,6 +1,5 @@
 def create_journal_template(date: str):
     return f"""---
-title: Journal for {date}
 tags: [journal, daily]
 date: {date}
 ---
@@ -50,7 +49,6 @@ def create_note_template(title: str, category: str, topic: str, date: str):
     tags = [f"#{category.lower()}", f"#{topic.lower()}"]
 
     return f"""---
-title: {title}
 date: {date}
 category: {category}
 topic: {topic}

@@ -3,19 +3,22 @@ from colors import *
 
 
 def main():
-    print(f"{GRN}{BOLD}Brain Manager{RESET}")
-    print(f"{CYN}0.{RESET} Open Notes")
-    print(f"{CYN}1.{RESET} Create Daily Journal")
-    print(f"{CYN}2.{RESET} Create Atomic Note")
+    SPACE = "  "
 
-    option = input(f"{GRN}[+]: {RESET}").strip()
+    print(f"{GRN}{BOLD}Brain Manager{RESET}")
+    print(f"{SPACE}{CYN}0){RESET} Open Notes")
+    print(f"{SPACE}{CYN}1){RESET} Create Daily Journal")
+    print(f"{SPACE}{CYN}2){RESET} Create Atomic Note")
+    print(f"{SPACE}{RED}q){RESET} Quit")
+
+    option = input(f"{GRN}> {RESET}").strip()
     if option == "0":
         os.system(f"nvim {BASE_DIR}")
     elif option == "1":
         daily_journal()
     elif option == "2":
         create_note()
-    else:
+    elif option == "q":
         exit()
 
 
