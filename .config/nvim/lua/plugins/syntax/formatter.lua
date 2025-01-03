@@ -8,20 +8,23 @@ return {
 	config = function()
 		require("conform").setup({
 			formatters_by_ft = {
-                markdown = { "prettier" },
+				markdown = { "prettier" },
 				lua = { "stylua" },
-				-- Conform will run multiple formatters sequentially
-				python = { "isort", "black" },
-				-- You can customize some of the format options for the filetype (:help conform.format)
-				rust = { "rustfmt", lsp_format = "fallback" },
-				-- Conform will run the first available formatter
-				javascript = { "prettierd", "prettier", stop_after_first = true },
-				go = { "gofumpt" },
 			},
 
 			format_on_save = {
 				timeout_ms = 500,
 				lsp_format = "fallback",
+			},
+
+			formatters = {
+				prettier = {
+					prepend_args = {
+						"--prose-wrap=always",
+						"--end-of-line=lf",
+						"--print-width=80",
+					},
+				},
 			},
 		})
 
