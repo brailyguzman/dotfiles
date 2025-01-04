@@ -1,5 +1,6 @@
 def create_journal_template(date: str):
     return f"""---
+title: Journal for {date}
 tags: [journal, daily]
 date: {date}
 ---
@@ -45,10 +46,16 @@ Today, I will get 1% better by
     """
 
 
-def create_note_template(title: str, category: str, topic: str, date: str):
-    tags = [f"#{category.lower()}", f"#{topic.lower()}"]
+def create_note_template(title: str, category: str, topic_hierarchy: str, date: str):
+    tags = [f"#{category.lower()}"]
+
+    topic_arr = topic_hierarchy.split("/")
+
+    for topic in topic_arr:
+        tags.append(f"#{topic.lower()}")
 
     return f"""---
+title: {title}
 date: {date}
 category: {category}
 topic: {topic}

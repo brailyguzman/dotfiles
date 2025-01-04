@@ -1,23 +1,36 @@
 from brain import *
 from colors import *
 
+options = [
+    {"command": "o", "text": f"(o) - Open Brain"},
+    {"command": "j", "text": f"(j) - Open Journal"},
+    {"command": "g", "text": f"(g) - Open Yearly Goals"},
+    {"command": "q", "text": f"(q) - Quit"},
+]
+
 
 def main():
-    SPACE = "  "
+    max_length = 0
 
-    print(f"{GRN}{BOLD}Brain Manager{RESET}")
-    print(f"{SPACE}{CYN}0){RESET} Open Notes")
-    print(f"{SPACE}{CYN}1){RESET} Create Daily Journal")
-    print(f"{SPACE}{CYN}2){RESET} Create Atomic Note")
-    print(f"{SPACE}{RED}q){RESET} Quit")
+    for option in options:
+        length = len(option["text"])
 
-    option = input(f"{GRN}> {RESET}").strip()
-    if option == "0":
+        if length > max_length:
+            max_length = length
+
+        print(f"{CYN}{option["text"]}{RESET}")
+
+    print("-" * max_length)
+
+    option = input(f"{GRN}[?]: {RESET}").strip()
+    if option == "o":
         os.system(f"nvim {BASE_DIR}")
-    elif option == "1":
+    elif option == "j":
         daily_journal()
-    elif option == "2":
+    elif option == "n":
         create_note()
+    elif option == "g":
+        open_goals()
     elif option == "q":
         exit()
 

@@ -1,18 +1,20 @@
 import os
 from datetime import datetime
 from pathlib import Path
+from colors import *
 
 from templates import *
 
 BASE_DIR = Path.home() / "Documents/SecondBrain"
+JOURNAL_DIR = BASE_DIR / "Journal" / str(datetime.now().year)
 date = datetime.now().strftime("%Y-%m-%d")
 
 
 def daily_journal():
-    journal_dir = BASE_DIR / "Journal" / datetime.now().strftime("%Y/%m")
-    journal_file = journal_dir / f"{datetime.now().strftime('%Y-%m-%d')}.md"
+    journal_month_dir = JOURNAL_DIR / str(datetime.now().month)
+    journal_file = journal_month_dir / f"{datetime.now().strftime('%Y-%m-%d')}.md"
 
-    journal_dir.mkdir(parents=True, exist_ok=True)
+    journal_month_dir.mkdir(parents=True, exist_ok=True)
 
     if not journal_file.exists():
         journal_file.write_text(create_journal_template(date))
@@ -21,16 +23,18 @@ def daily_journal():
 
 
 def create_note():
-    category = input(f"Enter category: ").strip()
+    print("Enter category (e.g. Programming)")
+    category = input(f"{GRN}> {RESET}").strip()
     category = category[0].upper() + category[1:].lower()
 
-    topic = input(f"Enter topic: ").strip()
-    topic = topic[0].upper() + topic[1:].lower()
+    print("Enter topic hierarchy (e.g. Libraries/React)")
+    topic_hierarchy = input(f"{GRN}> {RESET}").strip()
+    topic_hierarchy = topic_hierarchy[0].upper() + topic_hierarchy[1:].lower()
 
     title = input(f"Enter title: ").strip()
     title = " ".join(word.capitalize() for word in title.split())
 
-    note_dir = BASE_DIR / "Notes" / category / topic
+    note_dir = BASE_DIR / "Notes" / category / topic_hierarchy
     note_dir.mkdir(parents=True, exist_ok=True)
 
     existing_files = [f for f in note_dir.glob("*.md")]
@@ -44,8 +48,17 @@ def create_note():
         with open(note_file, "w") as f:
             f.write(
                 create_note_template(
-                    title, category, topic, datetime.now().strftime("%Y-%m-%d")
+                    title,
+                    category,
+                    topic_hierarchy,
+                    datetime.now().strftime("%Y-%m-%d"),
                 )
             )
 
     os.system(f"nvim {note_file}")
+
+
+def open_goals():
+    path = JOURNAL_DIR / "goals.md"
+
+    os.system(f"nvim {path}")
