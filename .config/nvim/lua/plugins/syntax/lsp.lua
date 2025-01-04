@@ -3,11 +3,7 @@ return {
 	dependencies = {
 		"williamboman/mason.nvim",
 		"williamboman/mason-lspconfig.nvim",
-		"saghen/blink.cmp",
-		{
-			"L3MON4D3/LuaSnip",
-			dependencies = { "rafamadriz/friendly-snippets" },
-		},
+		"hrsh7th/nvim-cmp",
 	},
 	config = function()
 		local servers = { "lua_ls", "marksman" }
@@ -19,7 +15,7 @@ return {
 
 		local lspconfig = require("lspconfig")
 
-		local capabilities = require("blink.cmp").get_lsp_capabilities()
+		local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 		for _, server in ipairs(servers) do
 			lspconfig[server].setup({
