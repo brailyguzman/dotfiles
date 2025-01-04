@@ -4,7 +4,7 @@ from colors import *
 options = [
     {"command": "o", "text": f"(o) - Open Brain"},
     {"command": "j", "text": f"(j) - Open Journal"},
-    {"command": "g", "text": f"(g) - Open Yearly Goals"},
+    {"command": "g", "text": f"(g) - Open Goals"},
     {"command": "q", "text": f"(q) - Quit"},
 ]
 

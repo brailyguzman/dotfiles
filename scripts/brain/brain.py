@@ -8,10 +8,12 @@ from templates import *
 BASE_DIR = Path.home() / "Documents/SecondBrain"
 JOURNAL_DIR = BASE_DIR / "Journal" / str(datetime.now().year)
 date = datetime.now().strftime("%Y-%m-%d")
+month = datetime.now().strftime("%m")
+year = datetime.now().strftime("%Y")
 
 
 def daily_journal():
-    journal_month_dir = JOURNAL_DIR / str(datetime.now().month)
+    journal_month_dir = JOURNAL_DIR / month
     journal_file = journal_month_dir / f"{datetime.now().strftime('%Y-%m-%d')}.md"
 
     journal_month_dir.mkdir(parents=True, exist_ok=True)
@@ -59,6 +61,9 @@ def create_note():
 
 
 def open_goals():
-    path = JOURNAL_DIR / "goals.md"
+    goals_path = JOURNAL_DIR / "goals.md"
 
-    os.system(f"nvim {path}")
+    if not goals_path.exists():
+        goals_path.write_text(create_goals_template(date, year))
+
+    os.system(f"nvim {goals_path}")
