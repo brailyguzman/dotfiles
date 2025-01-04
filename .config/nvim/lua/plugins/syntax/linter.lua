@@ -9,6 +9,13 @@ return {
 			markdown = { "markdownlint" },
 		}
 
+		local markdownlint = require("lint").linters.markdownlint
+		markdownlint.args = {
+			"--disable",
+			"MD025",
+			"--",
+		}
+
 		require("mason-nvim-lint").setup()
 
 		vim.api.nvim_create_autocmd({ "BufReadPost", "BufWritePost" }, {
