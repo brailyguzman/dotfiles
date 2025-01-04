@@ -22,7 +22,11 @@ def main():
 
     print("-" * max_length)
 
-    option = input(f"{GRN}[?]: {RESET}").strip()
+    try:
+        option = input(f"{GRN}[?]: {RESET}").strip()
+    except:
+        exit()
+
     if option == "o":
         os.system(f"nvim {BASE_DIR}")
     elif option == "j":
