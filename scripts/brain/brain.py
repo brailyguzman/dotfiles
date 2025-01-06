@@ -25,39 +25,48 @@ def daily_journal():
 
 
 def create_note():
-    print("Enter category (e.g. Programming)")
-    category = input(f"{GRN}> {RESET}").strip()
-    category = category[0].upper() + category[1:].lower()
+    try:
+        print("Enter category (e.g. Programming/JavaScript)")
+        category_hierarchy = input(f"{GRN}> {RESET}").strip()
+        category_hierarchy = "/".join(
+            category.title().replace(" ", "-")
+            for category in category_hierarchy.split("/")
+        )
 
-    print("Enter topic hierarchy (e.g. Libraries/React)")
-    topic_hierarchy = input(f"{GRN}> {RESET}").strip()
-    topic_hierarchy = topic_hierarchy[0].upper() + topic_hierarchy[1:].lower()
+        print("Enter topic hierarchy (e.g. Libraries/React)")
+        topic_hierarchy = input(f"{GRN}> {RESET}").strip()
+        topic_hierarchy = "/".join(
+            topic.title().replace(" ", "-") for topic in topic_hierarchy.split("/")
+        )
 
-    title = input(f"Enter title: ").strip()
-    title = " ".join(word.capitalize() for word in title.split())
+        title = input(f"Enter title: ").strip()
+        title_formatted = " ".join(word.capitalize() for word in title.split())
+        file_name = f"{len(list((BASE_DIR / 'Notes' / category_hierarchy / topic_hierarchy).glob('**/*.md')))+1:02d}-{title.replace(' ', '-').lower()}.md"
 
-    note_dir = BASE_DIR / "Notes" / category / topic_hierarchy
-    note_dir.mkdir(parents=True, exist_ok=True)
+        note_dir = BASE_DIR / "Notes" / category_hierarchy / topic_hierarchy
+        note_dir.mkdir(parents=True, exist_ok=True)
 
-    existing_files = [f for f in note_dir.glob("*.md")]
+        note_file = note_dir / file_name
 
-    note_counter = len(existing_files) + 1
-    file_name = f"{str(note_counter).zfill(2)}-{title.replace(' ', '_').lower()}.md"
+        if note_file.exists():
+            print(f"{RED}Error: Note with this filename already exists!{RESET}")
+            return
 
-    note_file = note_dir / file_name
-
-    if not note_file.exists():
         with open(note_file, "w") as f:
             f.write(
                 create_note_template(
-                    title,
-                    category,
+                    title_formatted,
+                    category_hierarchy,
                     topic_hierarchy,
                     datetime.now().strftime("%Y-%m-%d"),
                 )
             )
 
-    os.system(f"nvim {note_file}")
+        print(f"{GRN}Note created at: {note_file}{RESET}")
+        os.system(f"nvim {note_file}")
+
+    except Exception as e:
+        print(f"{RED}Error creating note: {e}{RESET}")
 
 
 def open_goals():
@@ -67,3 +76,36 @@ def open_goals():
         goals_path.write_text(create_goals_template(date, year))
 
     os.system(f"nvim {goals_path}")
+
+
+def create_project():
+    print("Enter Project Name (e.g. Listy)")
+    project_name = input(f"{GRN}> {RESET}").strip().capitalize()
+
+    print("Enter Project Type (e.g. Fullstack)")
+    project_type = input(f"{GRN}> {RESET}").strip().replace("-", "").capitalize()
+
+    if len(project_type) <= 3:
+        project_type = project_type.upper()
+
+    project_dir = BASE_DIR / "Projects" / project_type / project_name
+    project_dir.mkdir(parents=True, exist_ok=True)
+
+    create_project_template(project_name, project_type, date)
+
+    # TODO: Create files
+
+
+def find_note():
+    try:
+        find_command = (
+            f"find {BASE_DIR} -type f -name '*.md' " f"| sed 's|{BASE_DIR}/||' | fzf"
+        )
+        note_path = os.popen(find_command).read().strip()
+
+        if note_path:
+            os.system(f"nvim { BASE_DIR / note_path}")
+        else:
+            print(f"{RED}No note selected.{RESET}")
+    except Exception as e:
+        print(f"{RED}Error using fzf: {e}{RESET}")

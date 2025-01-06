@@ -46,8 +46,15 @@ Today, I will get 1% better by
     """
 
 
-def create_note_template(title: str, category: str, topic_hierarchy: str, date: str):
-    tags = [f"#{category.lower()}"]
+def create_note_template(
+    title: str, category_hierarchy: str, topic_hierarchy: str, date: str
+):
+    tags = []
+
+    category_arr = category_hierarchy.lower().split("/")
+
+    for category in category_arr:
+        tags.append(f"#{category.lower()}")
 
     topic_arr = topic_hierarchy.split("/")
 
@@ -57,32 +64,14 @@ def create_note_template(title: str, category: str, topic_hierarchy: str, date: 
     return f"""---
 title: {title}
 date: {date}
-category: {category}
+category: {category_hierarchy}
 topic: {topic}
-tags: {', '.join(tags)}
+tags: [{', '.join(tags)}]
 related_notes: []
 ---
 
 # {title}
 
-## Summary:
-
-- [ ] Write a brief summary of the key points covered in this note. What is the main takeaway?
-
-## Main Content:
-- [ ] Start expanding the details of this note. Include explanations, examples, and any other relevant information here.
-
-## Tags:
-
-- [ ] Add any additional tags relevant to the content of this note (e.g., #algorithm, #sorting). Tags help with easy categorization and discovery.
-
-## Related Notes:
-
-- [ ] Link to any other related notes. Example: [Algorithms](Algorithms.md)
-
-## Reflections:
-
-- [ ] Write any reflections or ideas for future work related to this note. How does it connect with your other ideas or notes?
 """
 
 
@@ -159,4 +148,17 @@ tags: [goals, yearly]
 - **End-of-Year Review**:
   - _What did you achieve? What lessons did you learn?_
   - _What will you carry into next year?_
+"""
+
+
+def create_project_template(project_name: str, project_type: str, date: str):
+    tags = ["#project", f"#{project_type}"]
+
+    return f"""---
+title: {project_name} Project
+date: {date}
+type: {project_type}
+tags: [{', '.join(tags)}]
+
+# {project_name} Project
 """

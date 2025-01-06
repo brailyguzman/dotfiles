@@ -2,41 +2,59 @@ from brain import *
 from colors import *
 
 options = [
-    {"command": "o", "text": f"(o) - Open Brain"},
-    {"command": "j", "text": f"(j) - Open Journal"},
-    {"command": "g", "text": f"(g) - Open Goals"},
-    {"command": "q", "text": f"(q) - Quit"},
+    {"command": "o", "text": "Open Brain"},
+    {"command": "j", "text": "Open Journal"},
+    {"command": "g", "text": "Open Goals"},
+    {"command": "n", "text": "Create Note"},
+    {"command": "p", "text": "Create Project (Uncompleted)"},
+    {"command": "f", "text": "Find Note"},
+    {"command": "q", "text": "Quit"},
 ]
 
 
-def main():
-    max_length = 0
+def clear():
+    os.system("clear")
+
+
+def display_menu():
+    clear()
+
+    max_length = max(len(option["text"]) for option in options)
+    print(f"{GRN}{BOLD}Brain Manager{RESET}")
+
+    print("-" * (max_length + 6))
 
     for option in options:
-        length = len(option["text"])
+        print(f"{CYN}({option['command']}){RESET} - {option['text']}")
 
-        if length > max_length:
-            max_length = length
+    print("-" * (max_length + 6))
 
-        print(f"{CYN}{option["text"]}{RESET}")
 
-    print("-" * max_length)
+def main():
+    while True:
+        display_menu()
 
-    try:
-        option = input(f"{GRN}[?]: {RESET}").strip()
-    except:
-        exit()
+        try:
+            choice = input(f"{GRN}[?]: {RESET}").strip().lower()
+        except KeyboardInterrupt:
+            exit()
 
-    if option == "o":
-        os.system(f"nvim {BASE_DIR}")
-    elif option == "j":
-        daily_journal()
-    elif option == "n":
-        create_note()
-    elif option == "g":
-        open_goals()
-    elif option == "q":
-        exit()
+        if choice == "o":
+            os.system(f"nvim {BASE_DIR}")
+        elif choice == "j":
+            daily_journal()
+        elif choice == "g":
+            open_goals()
+        elif choice == "n":
+            create_note()
+        elif choice == "p":
+            create_project()
+        elif choice == "f":
+            find_note()
+        elif choice == "q":
+            exit()
+        else:
+            print(f"{RED}Invalid option. Please try again.{RESET}")
 
 
 if __name__ == "__main__":
