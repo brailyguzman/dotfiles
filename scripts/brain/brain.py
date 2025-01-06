@@ -7,9 +7,22 @@ from templates import *
 
 BASE_DIR = Path.home() / "Documents/SecondBrain"
 JOURNAL_DIR = BASE_DIR / "Journal" / str(datetime.now().year)
+EDITOR = os.getenv("EDITOR")
 date = datetime.now().strftime("%Y-%m-%d")
 month = datetime.now().strftime("%m")
 year = datetime.now().strftime("%Y")
+
+
+def open_editor(path, file):
+    os.system(f"cd {path}")
+
+    command = f"cd {path} && "
+    if not file:
+        command += f"{EDITOR} ."
+    else:
+        command += f"{EDITOR} {file}"
+
+    os.system(command)
 
 
 def daily_journal():
@@ -21,7 +34,7 @@ def daily_journal():
     if not journal_file.exists():
         journal_file.write_text(create_journal_template(date))
 
-    os.system(f"nvim {journal_file}")
+    open_editor(path=BASE_DIR, file=journal_file)
 
 
 def create_note():
@@ -63,19 +76,19 @@ def create_note():
             )
 
         print(f"{GRN}Note created at: {note_file}{RESET}")
-        os.system(f"nvim {note_file}")
+        open_editor(path=BASE_DIR, file=note_file)
 
     except Exception as e:
         print(f"{RED}Error creating note: {e}{RESET}")
 
 
 def open_goals():
-    goals_path = JOURNAL_DIR / "goals.md"
+    goals_file = JOURNAL_DIR / "goals.md"
 
-    if not goals_path.exists():
-        goals_path.write_text(create_goals_template(date, year))
+    if not goals_file.exists():
+        goals_file.write_text(create_goals_template(date, year))
 
-    os.system(f"nvim {goals_path}")
+    open_editor(path=BASE_DIR, file=goals_file)
 
 
 def create_project():
@@ -101,10 +114,10 @@ def find_note():
         find_command = (
             f"find {BASE_DIR} -type f -name '*.md' " f"| sed 's|{BASE_DIR}/||' | fzf"
         )
-        note_path = os.popen(find_command).read().strip()
+        note_path = BASE_DIR / os.popen(find_command).read().strip()
 
         if note_path:
-            os.system(f"nvim { BASE_DIR / note_path}")
+            open_editor(path=BASE_DIR, file=note_path)
         else:
             print(f"{RED}No note selected.{RESET}")
     except Exception as e:
