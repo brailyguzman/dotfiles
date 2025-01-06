@@ -12,13 +12,7 @@ options = [
 ]
 
 
-def clear():
-    os.system("clear")
-
-
 def display_menu():
-    clear()
-
     max_length = max(len(option["text"]) for option in options)
     print(f"{GRN}{BOLD}Brain Manager{RESET}")
 
