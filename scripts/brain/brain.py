@@ -75,7 +75,6 @@ def create_note():
                 )
             )
 
-        print(f"{GRN}Note created at: {note_file}{RESET}")
         open_editor(path=BASE_DIR, file=note_file)
 
     except Exception as e:
@@ -112,9 +111,13 @@ def create_project():
 def find_note():
     try:
         find_command = (
-            f"find {BASE_DIR} -type f -name '*.md' " f"| sed 's|{BASE_DIR}/||' | fzf"
+            f"find -L {BASE_DIR} -type f -name '*.md' " f"| sed 's|{BASE_DIR}/||' | fzf"
         )
+
         note_path = BASE_DIR / os.popen(find_command).read().strip()
+
+        if note_path == BASE_DIR:
+            return
 
         if note_path:
             open_editor(path=BASE_DIR, file=note_path)

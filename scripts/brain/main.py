@@ -33,22 +33,27 @@ def main():
         except KeyboardInterrupt:
             exit()
 
-        if choice == "o":
-            os.system(f"nvim {BASE_DIR}")
-        elif choice == "j":
-            daily_journal()
-        elif choice == "g":
-            open_goals()
-        elif choice == "n":
-            create_note()
-        elif choice == "p":
-            create_project()
-        elif choice == "f":
-            find_note()
-        elif choice == "q":
-            exit()
-        else:
-            print(f"{RED}Invalid option. Please try again.{RESET}")
+        try:
+            if choice == "o":
+                os.system(f"nvim {BASE_DIR}")
+            elif choice == "j":
+                daily_journal()
+            elif choice == "g":
+                open_goals()
+            elif choice == "n":
+                create_note()
+            elif choice == "p":
+                create_project()
+            elif choice == "f":
+                find_note()
+            elif choice == "q":
+                break
+            else:
+                print(f"{RED}Invalid option. Please try again.{RESET}")
+
+            print("")
+        except:
+            pass
 
 
 if __name__ == "__main__":
