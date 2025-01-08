@@ -2,7 +2,7 @@
 alias update="brew update"
 alias upgrade="brew upgrade"
 alias cleanup="brew cleanup"
-alias dump="brew bundle dump --casks --taps --brews --describe --force"
+alias dump="brew bundle dump --casks --taps --brews --describe --force --file=~/Brewfile"
 alias uucd="update && upgrade && cleanup && dump" # U: Update | U: Upgrade | C: Cleanup | D: Dump
 
 # Neovim
