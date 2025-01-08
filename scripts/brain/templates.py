@@ -1,3 +1,18 @@
+"""
+- Create a template for:
+    - Overview
+    - Task list
+    # TODO: Think of something else
+"""
+
+
+class Project:
+    def __init__(self, name, type, date):
+        self.name = name
+        self.type = type
+        self.date = date
+
+
 def create_journal_template(date: str):
     return f"""---
 title: Journal for {date}
@@ -54,7 +69,7 @@ def create_note_template(
     category_arr = category_hierarchy.lower().split("/")
 
     for category in category_arr:
-        tags.append(f"#{category.lower()}")
+        tags.append(f"{category.lower()}")
 
     topic_arr = topic_hierarchy.split("/")
 
@@ -64,8 +79,6 @@ def create_note_template(
     return f"""---
 title: {title}
 date: {date}
-category: {category_hierarchy}
-topic: {topic}
 tags: [{', '.join(tags)}]
 related_notes: []
 ---
