@@ -7,6 +7,8 @@ brew "bat"
 brew "python@3.13"
 # Cross-platform make
 brew "cmake"
+# Secure runtime for JavaScript and TypeScript
+brew "deno"
 # Modern, maintained replacement for ls
 brew "eza"
 # Like neofetch, but much faster because written mostly in C
@@ -62,6 +64,7 @@ cask "drawio"
 # Collaborative team software
 cask "figma"
 cask "font-jetbrains-mono-nerd-font"
+cask "font-sn-pro"
 # Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
 # Tools to protect your emails and files
