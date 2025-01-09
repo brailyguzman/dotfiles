@@ -2,7 +2,7 @@
 
 -- Cursor
 vim.opt.guicursor =
-"n-v-c:block-blinkon100-blinkoff100-blinkwait200,i:ver100-blinkon100-blinkoff100-blinkwait200,r-cr:hor20-blinkon100-blinkoff100-blinkwait200,o:hor50-blinkon100-blinkoff100-blinkwait200"
+	"n-v-c:block-blinkon100-blinkoff100-blinkwait200,i:ver100-blinkon100-blinkoff100-blinkwait200,r-cr:hor20-blinkon100-blinkoff100-blinkwait200,o:hor50-blinkon100-blinkoff100-blinkwait200"
 
 -- disable wrap line
 vim.opt.wrap = false
@@ -16,9 +16,9 @@ vim.opt.clipboard = "unnamedplus"
 -- Indenting
 vim.opt.autoindent = true
 vim.opt.smartindent = true
-vim.opt.shiftwidth = 2
-vim.opt.tabstop = 2
-vim.opt.softtabstop = 2
+vim.opt.shiftwidth = 4
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
 vim.opt.expandtab = true
 
 -- Line numbers
@@ -55,13 +55,5 @@ vim.opt.scrolloff = 8
 -- Remove tilde (~)
 vim.opt.fillchars = { eob = " " }
 
-vim.opt.conceallevel = 2
-vim.opt.concealcursor = "n"
-
 -- Completion options
 vim.o.completeopt = "menu,menuone,noinsert,noselect"
-
-vim.opt.spell = true
-vim.opt.spelllang = "en_us"
-
-vim.g.markdown_recommended_style = 0
