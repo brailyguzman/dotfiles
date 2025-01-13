@@ -30,7 +30,7 @@ brew "lazygit"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
 # Object-relational database system
-brew "postgresql@14", restart_service: true
+brew "postgresql@14", restart_service: :changed
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Safe, concurrent, practical language
@@ -63,8 +63,8 @@ cask "discord"
 cask "drawio"
 # Collaborative team software
 cask "figma"
+cask "font-atkinson-hyperlegible"
 cask "font-jetbrains-mono-nerd-font"
-cask "font-sn-pro"
 # Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
 # Tools to protect your emails and files
@@ -73,8 +73,6 @@ cask "gpg-suite"
 cask "grammarly-desktop"
 # Utility to hide menu bar items
 cask "hiddenbar"
-# Calendar for professionals and teams
-cask "notion-calendar"
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
 # Collaboration platform for API development
