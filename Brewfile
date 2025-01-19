@@ -5,6 +5,8 @@ tap "mongodb/brew"
 brew "bat"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.13"
+# Formatting tools for C, C++, Obj-C, Java, JavaScript, TypeScript
+brew "clang-format"
 # Cross-platform make
 brew "cmake"
 # Secure runtime for JavaScript and TypeScript
@@ -49,12 +51,12 @@ brew "watchman"
 brew "wget"
 # High-performance, schema-free, document-oriented database
 brew "mongodb/brew/mongodb-community"
-# Password manager that keeps all passwords secure behind one password
-cask "1password"
 # Menu bar tool to limit maximum charging percentage
 cask "aldente"
 # Application uninstaller
 cask "appcleaner"
+# Desktop password and login vault
+cask "bitwarden"
 # Web browser focusing on privacy
 cask "brave-browser"
 # Voice and text chat software
