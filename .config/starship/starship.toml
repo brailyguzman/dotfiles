@@ -1,3 +1,7 @@
+command_timeout = 1000
+
+"$schema" = 'https://starship.rs/config-schema.json'
+
 # No new line
 add_newline = false
 
@@ -6,6 +10,8 @@ format = """
 [](bold blue) $directory\
 $git_branch\
 $git_state\
+$git_status\
+$all\
 $line_break\
 $character"""
 
