@@ -1,6 +1,7 @@
 tap "homebrew/bundle"
 tap "homebrew/services"
 tap "mongodb/brew"
+tap "nikitabobko/tap"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
 # Interpreted, interactive, object-oriented programming language
@@ -51,6 +52,8 @@ brew "watchman"
 brew "wget"
 # High-performance, schema-free, document-oriented database
 brew "mongodb/brew/mongodb-community"
+# AeroSpace is an i3-like tiling window manager for macOS
+cask "aerospace"
 # Menu bar tool to limit maximum charging percentage
 cask "aldente"
 # Application uninstaller
