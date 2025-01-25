@@ -237,4 +237,6 @@ automatically-unhide-macos-hidden-apps = false
 [[on-window-detected]]
     if.app-id = 'com.tinyspeck.slackmacgap'
     run = "move-node-to-workspace S"
-
+[[on-window-detected]]
+    if.app-id = 'com.bitwarden.desktop'
+    run = "move-node-to-workspace P"
