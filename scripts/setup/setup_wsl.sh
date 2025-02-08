@@ -2,7 +2,7 @@
 
 # Create directories in the Home folder
 echo "Creating default directories in the Home folder..."
-cd ~ && mkdir -p Documents Downloads Repos Work Development
+cd ~ && mkdir -p Documents Downloads Repos Work Developer
 
 # Update and upgrade system
 echo "Updating and upgrading system..."
@@ -17,6 +17,13 @@ if [ ! -d "$HOME/.oh-my-zsh" ]; then
     echo "Installing Oh My Zsh..."
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
     sudo chsh -s $(which zsh) $USER
+
+    echo "Installing Zsh Syntax Highlighting"
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+    echo "Installing Zsh Auto Suggestions"
+    git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
 else
     echo "Oh My Zsh is already installed."
 fi
@@ -49,8 +56,8 @@ fi
 # fi
 
 # Install additional packages
-echo "Installing additional packages..."
-brew install llvm python neovim tmux fastfetch htop btop ripgrep lazygit go stow
+# echo "Installing additional packages..."
+# brew install llvm python neovim tmux fastfetch htop btop ripgrep lazygit go stow
 
 EMAIL="brailyg@outlook.com"
 
@@ -93,7 +100,7 @@ stow .
 
 # Setup Node and NPM
 echo "Setting up Node and NPM..."
-nvm install --lts && npm install -g npm@latest typescript yarn nodemon
+# nvm install --lts && npm install -g npm@latest typescript yarn nodemon
 
 # Final message
 echo "Setup complete! Restart your terminal or run 'exec zsh' to apply changes."
