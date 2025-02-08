@@ -6,7 +6,7 @@ This is a WSL/Linux Setup script for setting up a fresh created instance with th
 
 ### Download WSL Setup Script
 ```bash
-curl -o ~/setup/setup_wsl.sh https://raw.githubusercontent.com/brailyguzman/dotfiles/main/scripts/setup_wsl.sh
+curl -o ~/setup/setup_wsl.sh https://raw.githubusercontent.com/brailyguzman/dotfiles/refs/heads/main/scripts/setup/setup_wsl.sh
 ```
 
 ### Give the script permissions
