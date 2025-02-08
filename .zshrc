@@ -4,13 +4,19 @@ source ~/.config/zsh/init.zsh
 # Detect the OS and source the appropriate configuration
 OS_TYPE=$(uname)
 
-if [ "$OS_TYPE" = "Darwin" ]; then
-    source ~/.config/zsh/os/darwin.zsh
-else
-    source ~/.config/zsh/os/linux.zsh
-fi
-
 # Source util files
-for file in ~/.config/zsh/utils/*.zsh; do
+for file in ~/.config/zsh/global/*.zsh; do
     [ -r "$file" ] && [ -f "$file" ] && source "$file"
 done
+
+if [ "$OS_TYPE" = "Darwin" ]; then
+    # source ~/.config/zsh/darwin/darwin.zsh
+    for file in ~/.config/zsh/darwin/*.zsh; do
+        [ -r "$file" ] && [ -f "$file" ] && source "$file"
+    done
+else
+    # source ~/.config/zsh/os/linux.zsh
+    for file in ~/.config/zsh/linux/*.zsh; do
+        [ -r "$file" ] && [ -f "$file" ] && source "$file"
+    done
+fi

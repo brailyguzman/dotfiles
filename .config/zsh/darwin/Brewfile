@@ -4,14 +4,10 @@ tap "mongodb/brew"
 tap "nikitabobko/tap"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.13"
 # Formatting tools for C, C++, Obj-C, Java, JavaScript, TypeScript
 brew "clang-format"
 # Cross-platform make
 brew "cmake"
-# Secure runtime for JavaScript and TypeScript
-brew "deno"
 # Modern, maintained replacement for ls
 brew "eza"
 # Like neofetch, but much faster because written mostly in C
@@ -26,14 +22,16 @@ brew "gcc"
 brew "go"
 # Improved top (interactive process viewer)
 brew "htop"
-# Tools and libraries to manipulate images in many formats
-brew "imagemagick"
 # Simple terminal UI for git commands
 brew "lazygit"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.13"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
 # Object-relational database system
 brew "postgresql@14", restart_service: :changed
+# Static type checker for Python
+brew "pyright"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Safe, concurrent, practical language
@@ -80,6 +78,8 @@ cask "grammarly-desktop"
 cask "hiddenbar"
 # Keyboard customiser
 cask "karabiner-elements"
+# Clipboard manager
+cask "maccy"
 # Open-source software for live streaming and screen recording
 cask "obs"
 # Knowledge base that works on top of a local folder of plain text Markdown files
@@ -96,7 +96,5 @@ cask "slack"
 cask "spotify"
 # Open-source code editor
 cask "visual-studio-code"
-# Multiplayer code editor
-cask "zed"
 # Video communication and virtual meeting platform
 cask "zoom"

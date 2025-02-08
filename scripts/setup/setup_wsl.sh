@@ -32,21 +32,21 @@ else
 fi
 
 # Install NVM via Homebrew
-if ! brew list nvm &>/dev/null; then
-    echo "Installing NVM via Homebrew..."
-    brew install nvm
-    mkdir -p ~/.nvm
-else
-    echo "NVM is already installed."
-fi
+# if ! brew list nvm &>/dev/null; then
+#     echo "Installing NVM via Homebrew..."
+#     brew install nvm
+#     mkdir -p ~/.nvm
+# else
+#     echo "NVM is already installed."
+# fi
 
 # Install zsh-syntax-highlighting via Homebrew
-if ! brew list zsh-syntax-highlighting &>/dev/null; then
-    echo "Installing zsh-syntax-highlighting via Homebrew..."
-    brew install zsh-syntax-highlighting
-else
-    echo "zsh-syntax-highlighting is already installed."
-fi
+# if ! brew list zsh-syntax-highlighting &>/dev/null; then
+#     echo "Installing zsh-syntax-highlighting via Homebrew..."
+#     brew install zsh-syntax-highlighting
+# else
+#     echo "zsh-syntax-highlighting is already installed."
+# fi
 
 # Install additional packages
 echo "Installing additional packages..."
