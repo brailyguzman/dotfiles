@@ -1,6 +1,6 @@
 # Font
 font-family = "JetBrainsMono Nerd Font"
-font-size = 18
+font-size = 22
 
 # Window
 window-width = 81
@@ -35,7 +35,7 @@ palette = 12=#89b4fa
 palette = 13=#f5c2e7
 palette = 14=#94e2d5
 palette = 15=#a6adc8
-background = 0E1117
+background = 0C0C0D
 foreground = cdd6f4
 cursor-color = f5e0dc
 selection-background = 353749
