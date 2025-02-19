@@ -12,8 +12,6 @@ brew "cmake"
 brew "eza"
 # Like neofetch, but much faster because written mostly in C
 brew "fastfetch"
-# Fast and simple Node.js version manager
-brew "fnm"
 # Command-line fuzzy finder written in Go
 brew "fzf"
 # GNU compiler collection
@@ -28,6 +26,8 @@ brew "lazygit"
 brew "python@3.13"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
+# Manage multiple Node.js versions
+brew "nvm"
 # Object-relational database system
 brew "postgresql@14", restart_service: :changed
 # Static type checker for Python
