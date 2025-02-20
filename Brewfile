@@ -24,10 +24,10 @@ brew "htop"
 brew "lazygit"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.13"
+# Platform built on V8 to build network applications
+brew "node"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
-# Manage multiple Node.js versions
-brew "nvm"
 # Object-relational database system
 brew "postgresql@14", restart_service: :changed
 # Static type checker for Python
@@ -67,6 +67,8 @@ cask "drawio"
 # Collaborative team software
 cask "figma"
 cask "font-atkinson-hyperlegible"
+cask "font-blex-mono-nerd-font"
+cask "font-commit-mono-nerd-font"
 cask "font-ibm-plex-mono"
 cask "font-jetbrains-mono-nerd-font"
 cask "font-sf-mono"
