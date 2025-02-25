@@ -60,6 +60,8 @@ cask "appcleaner"
 cask "bitwarden"
 # Web browser focusing on privacy
 cask "brave-browser"
+# Anthropic's official Claude AI desktop app
+cask "claude"
 # Voice and text chat software
 cask "discord"
 # Online diagram software
@@ -68,7 +70,6 @@ cask "drawio"
 cask "figma"
 cask "font-atkinson-hyperlegible"
 cask "font-blex-mono-nerd-font"
-cask "font-commit-mono-nerd-font"
 cask "font-ibm-plex-mono"
 cask "font-jetbrains-mono-nerd-font"
 cask "font-sf-mono"
