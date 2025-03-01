@@ -58,8 +58,6 @@ cask "aldente"
 cask "appcleaner"
 # Desktop password and login vault
 cask "bitwarden"
-# Web browser focusing on privacy
-cask "brave-browser"
 # Anthropic's official Claude AI desktop app
 cask "claude"
 # Voice and text chat software
@@ -75,6 +73,8 @@ cask "font-jetbrains-mono-nerd-font"
 cask "font-sf-mono"
 # Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
+# Web browser
+cask "google-chrome"
 # Tools to protect your emails and files
 cask "gpg-suite"
 # Grammarly for desktop
@@ -99,6 +99,8 @@ cask "rectangle"
 cask "slack"
 # Music streaming service
 cask "spotify"
+# System monitor for the menu bar
+cask "stats"
 # Open-source code editor
 cask "visual-studio-code"
 # Video communication and virtual meeting platform
