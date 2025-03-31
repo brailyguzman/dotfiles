@@ -22,8 +22,6 @@ brew "go"
 brew "htop"
 # Simple terminal UI for git commands
 brew "lazygit"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.13"
 # Platform built on V8 to build network applications
 brew "node"
 # Ambitious Vim-fork focused on extensibility and agility
@@ -32,6 +30,8 @@ brew "neovim"
 brew "postgresql@14", restart_service: :changed
 # Static type checker for Python
 brew "pyright"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.13"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Safe, concurrent, practical language
@@ -70,6 +70,7 @@ cask "font-atkinson-hyperlegible"
 cask "font-blex-mono-nerd-font"
 cask "font-ibm-plex-mono"
 cask "font-jetbrains-mono-nerd-font"
+cask "font-maple-mono-nf"
 cask "font-sf-mono"
 # Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
@@ -85,6 +86,8 @@ cask "hiddenbar"
 cask "karabiner-elements"
 # Clipboard manager
 cask "maccy"
+# App to write, plan, collaborate, and get organised
+cask "notion"
 # Open-source software for live streaming and screen recording
 cask "obs"
 # Knowledge base that works on top of a local folder of plain text Markdown files
