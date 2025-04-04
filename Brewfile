@@ -4,8 +4,6 @@ tap "mongodb/brew"
 tap "nikitabobko/tap"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
-# Formatting tools for C, C++, Obj-C, Java, JavaScript, TypeScript
-brew "clang-format"
 # Cross-platform make
 brew "cmake"
 # Modern, maintained replacement for ls
@@ -28,8 +26,6 @@ brew "node"
 brew "neovim"
 # Object-relational database system
 brew "postgresql@14", restart_service: :changed
-# Static type checker for Python
-brew "pyright"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.13"
 # Search tool like grep and The Silver Searcher
@@ -44,8 +40,6 @@ brew "stow"
 brew "tmux"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
-# Watch files and take action when they change
-brew "watchman"
 # Internet file retriever
 brew "wget"
 # High-performance, schema-free, document-oriented database
@@ -66,12 +60,8 @@ cask "discord"
 cask "drawio"
 # Collaborative team software
 cask "figma"
-cask "font-atkinson-hyperlegible"
-cask "font-blex-mono-nerd-font"
-cask "font-ibm-plex-mono"
 cask "font-jetbrains-mono-nerd-font"
 cask "font-maple-mono-nf"
-cask "font-sf-mono"
 # Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
 # Web browser
@@ -84,12 +74,10 @@ cask "grammarly-desktop"
 cask "hiddenbar"
 # Keyboard customiser
 cask "karabiner-elements"
-# Clipboard manager
-cask "maccy"
 # App to write, plan, collaborate, and get organised
 cask "notion"
-# Open-source software for live streaming and screen recording
-cask "obs"
+# Calendar for professionals and teams
+cask "notion-calendar"
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
 # Collaboration platform for API development
