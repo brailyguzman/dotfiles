@@ -7,10 +7,17 @@ add_newline = false
 
 # A minimal left prompt
 format = """
-󰚌 $directory\
+ $directory\
 $git_branch\
 $git_state\
 $character"""
+
+right_format = """
+$time󰥔
+"""
+
+[time]
+disabled = false
 
 [line_break]
 disabled = false
