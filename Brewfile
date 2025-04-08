@@ -46,8 +46,6 @@ brew "wget"
 brew "mongodb/brew/mongodb-community"
 # AeroSpace is an i3-like tiling window manager for macOS
 cask "aerospace"
-# Menu bar tool to limit maximum charging percentage
-cask "aldente"
 # Application uninstaller
 cask "appcleaner"
 # Desktop password and login vault
@@ -86,12 +84,12 @@ cask "postman"
 cask "raycast"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
+# Collection of apps available by subscription
+cask "setapp"
 # Team communication and collaboration software
 cask "slack"
 # Music streaming service
 cask "spotify"
-# System monitor for the menu bar
-cask "stats"
 # Open-source code editor
 cask "visual-studio-code"
 # Video communication and virtual meeting platform
