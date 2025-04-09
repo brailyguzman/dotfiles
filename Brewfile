@@ -24,8 +24,6 @@ brew "lazygit"
 brew "node"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
-# Object-relational database system
-brew "postgresql@14", restart_service: :changed
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.13"
 # Search tool like grep and The Silver Searcher
@@ -50,6 +48,8 @@ cask "aerospace"
 cask "appcleaner"
 # Desktop password and login vault
 cask "bitwarden"
+# Prevents your sleeping computer from connecting to Bluetooth accessories
+cask "bluesnooze"
 # Anthropic's official Claude AI desktop app
 cask "claude"
 # Voice and text chat software
