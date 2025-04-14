@@ -48,3 +48,6 @@ opt.signcolumn = "yes"
 
 -- Scroll off
 opt.scrolloff = 8
+
+opt.linebreak = true
+opt.breakindent = true
