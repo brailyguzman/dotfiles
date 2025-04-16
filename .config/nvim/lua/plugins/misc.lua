@@ -64,13 +64,4 @@ return {
 		event = "VeryLazy",
 		enabled = vim.fn.has("nvim-0.10.0") == 1,
 	},
-	{
-		"kosayoda/nvim-lightbulb",
-		lazy = false,
-		config = function()
-			require("nvim-lightbulb").setup({
-				autocmd = { enabled = true },
-			})
-		end,
-	},
 }
