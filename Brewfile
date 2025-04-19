@@ -20,6 +20,8 @@ brew "go"
 brew "htop"
 # Simple terminal UI for git commands
 brew "lazygit"
+# Linux virtual machines
+brew "lima"
 # Platform built on V8 to build network applications
 brew "node"
 # Ambitious Vim-fork focused on extensibility and agility
@@ -46,16 +48,12 @@ brew "mongodb/brew/mongodb-community"
 cask "aerospace"
 # Application uninstaller
 cask "appcleaner"
-# Desktop password and login vault
-cask "bitwarden"
 # Prevents your sleeping computer from connecting to Bluetooth accessories
 cask "bluesnooze"
 # Anthropic's official Claude AI desktop app
 cask "claude"
 # Voice and text chat software
 cask "discord"
-# Online diagram software
-cask "drawio"
 # Collaborative team software
 cask "figma"
 cask "font-jetbrains-mono-nerd-font"
@@ -82,14 +80,12 @@ cask "obsidian"
 cask "postman"
 # Control your tools with a few keystrokes
 cask "raycast"
-# Move and resize windows using keyboard shortcuts or snap areas
-cask "rectangle"
-# Collection of apps available by subscription
-cask "setapp"
 # Team communication and collaboration software
 cask "slack"
 # Music streaming service
 cask "spotify"
+# Native GUI tool for relational databases
+cask "tableplus"
 # Open-source code editor
 cask "visual-studio-code"
 # Video communication and virtual meeting platform
