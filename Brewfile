@@ -2,14 +2,22 @@ tap "homebrew/bundle"
 tap "homebrew/services"
 tap "mongodb/brew"
 tap "nikitabobko/tap"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.13"
+# Official Amazon AWS command-line interface
+brew "awscli"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# Resource monitor. C++ version and continuation of bashtop and bpytop
+brew "btop"
 # Cross-platform make
 brew "cmake"
 # Modern, maintained replacement for ls
 brew "eza"
 # Like neofetch, but much faster because written mostly in C
 brew "fastfetch"
+# Simple, fast and user-friendly alternative to find
+brew "fd"
 # Command-line fuzzy finder written in Go
 brew "fzf"
 # GNU compiler collection
@@ -26,8 +34,8 @@ brew "lima"
 brew "node"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.13"
+# CLI for Postgres with auto-completion and syntax highlighting
+brew "pgcli"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Safe, concurrent, practical language
@@ -46,8 +54,12 @@ brew "wget"
 brew "mongodb/brew/mongodb-community"
 # AeroSpace is an i3-like tiling window manager for macOS
 cask "aerospace"
+# Menu bar tool to limit maximum charging percentage
+cask "aldente"
 # Application uninstaller
 cask "appcleaner"
+# Desktop password and login vault
+cask "bitwarden"
 # Prevents your sleeping computer from connecting to Bluetooth accessories
 cask "bluesnooze"
 # Anthropic's official Claude AI desktop app
@@ -56,6 +68,8 @@ cask "claude"
 cask "discord"
 # Collaborative team software
 cask "figma"
+cask "font-blex-mono-nerd-font"
+cask "font-hack-nerd-font"
 cask "font-jetbrains-mono-nerd-font"
 cask "font-maple-mono-nf"
 # Terminal emulator that uses platform-native UI and GPU acceleration
@@ -88,5 +102,7 @@ cask "spotify"
 cask "tableplus"
 # Open-source code editor
 cask "visual-studio-code"
+# Gecko based web browser
+cask "zen"
 # Video communication and virtual meeting platform
 cask "zoom"
