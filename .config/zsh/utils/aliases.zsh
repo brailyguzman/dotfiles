@@ -9,9 +9,6 @@ alias backup="update && upgrade && cleanup && dump"
 alias vi="nvim"
 alias vim="nvim"
 
-# Scripts
-alias brain="python3 ~/scripts/brain/main.py"
-
 # Eza (ls replacement)
 alias ls="eza --icons --group --header --grid --sort=type"
 alias ll="eza --long --icons --group --header --sort=size"

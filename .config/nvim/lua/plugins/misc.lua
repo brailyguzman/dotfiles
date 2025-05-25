@@ -9,13 +9,13 @@ return {
 			-- or leave it empty to use the default settings
 			-- refer to the configuration section below
 			bigfile = { enabled = true },
-			dashboard = { enabled = false },
+			dashboard = { enabled = true },
 			explorer = { enabled = false },
 			indent = { enabled = true },
-			input = { enabled = false },
-			picker = { enabled = false },
-			notifier = { enabled = false },
-			quickfile = { enabled = false },
+			input = { enabled = true },
+			picker = { enabled = true },
+			notifier = { enabled = true },
+			quickfile = { enabled = true },
 			scope = { enabled = true },
 			scroll = { enabled = true },
 			statuscolumn = { enabled = true },
@@ -63,5 +63,24 @@ return {
 		opts = {},
 		event = "VeryLazy",
 		enabled = vim.fn.has("nvim-0.10.0") == 1,
+	},
+	{
+		"echasnovski/mini.icons",
+		lazy = true,
+		opts = {
+			file = {
+				[".keep"] = { glyph = "󰊢", hl = "MiniIconsGrey" },
+				["devcontainer.json"] = { glyph = "", hl = "MiniIconsAzure" },
+			},
+			filetype = {
+				dotenv = { glyph = "", hl = "MiniIconsYellow" },
+			},
+		},
+		init = function()
+			package.preload["nvim-web-devicons"] = function()
+				require("mini.icons").mock_nvim_web_devicons()
+				return package.loaded["nvim-web-devicons"]
+			end
+		end,
 	},
 }

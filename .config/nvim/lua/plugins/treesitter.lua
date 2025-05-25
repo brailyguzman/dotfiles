@@ -18,8 +18,9 @@ return {
 				"typescript",
 				"javascript",
 				"asm",
+				"go",
 			},
-			sync_install = false,
+			sync_install = true,
 			highlight = { enable = true },
 			indent = { enable = true },
 		})
