@@ -1,25 +1,5 @@
 # Braily's Dotfiles
 
-## WSL/Linux Setup
-
-This is a WSL/Linux Setup script for setting up a fresh created instance with the tools and settings I use.
-
-### Download WSL Setup Script
-```bash
-curl -o ~/setup/setup_wsl.sh https://raw.githubusercontent.com/brailyguzman/dotfiles/refs/heads/main/scripts/setup/setup_wsl.sh
-```
-
-### Give the script permissions
-
-```bash
-chmod +x ~/setup/setup_wsl.sh
-```
-
-### Execute the script
-```bash
-~/.setup/setup_wsl.sh
-```
-
 ## Stow
 Once this repository is cloned and is on `~/dotfiles`
 Run the following command to set up GNU Stow.
