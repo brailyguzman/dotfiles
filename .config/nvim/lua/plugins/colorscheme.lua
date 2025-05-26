@@ -22,7 +22,7 @@ return {
 					all = {
 						ui = {
 							float = {
-								bg = "none",
+								-- bg = "none",
 							},
 							bg_gutter = "none",
 						},

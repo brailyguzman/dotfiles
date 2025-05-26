@@ -20,11 +20,12 @@ o.mouse = "a"
 
 -- Numbers
 o.number = true
+o.relativenumber = true
 o.numberwidth = 2
 o.ruler = false
 
 -- disable nvim intro
-opt.shortmess:append "sI"
+opt.shortmess:append("sI")
 
 o.signcolumn = "yes"
 o.splitbelow = true
@@ -35,7 +36,8 @@ o.undofile = true
 -- interval for writing swap file to disk, also used by gitsigns
 o.updatetime = 250
 
-opt.guicursor = "n-v-c:block-blinkon100-blinkoff100-blinkwait200,i:ver100-blinkon100-blinkoff100-blinkwait200,r-cr:hor20-blinkon100-blinkoff100-blinkwait200,o:hor50-blinkon100-blinkoff100-blinkwait200"
+opt.guicursor =
+	"n-v-c:block-blinkon100-blinkoff100-blinkwait200,i:ver100-blinkon100-blinkoff100-blinkwait200,r-cr:hor20-blinkon100-blinkoff100-blinkwait200,o:hor50-blinkon100-blinkoff100-blinkwait200"
 
 -- Swap
 opt.swapfile = false

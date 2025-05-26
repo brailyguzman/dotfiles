@@ -24,6 +24,20 @@ return {
 					capabilities = capabilities,
 				})
 			end
+
+			local bufopts = { noremap = true }
+
+			vim.keymap.set("n", "gD", vim.lsp.buf.declaration, bufopts)
+			vim.keymap.set("n", "gd", vim.lsp.buf.definition, bufopts)
+			vim.keymap.set("n", "K", vim.lsp.buf.hover, bufopts)
+			vim.keymap.set("n", "gi", vim.lsp.buf.implementation, bufopts)
+			vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, bufopts)
+			vim.keymap.set("n", "<leader>wa", vim.lsp.buf.add_workspace_folder, bufopts)
+			vim.keymap.set("n", "<leader>wr", vim.lsp.buf.remove_workspace_folder, bufopts)
+			vim.keymap.set("n", "<leader>D", vim.lsp.buf.type_definition, bufopts)
+			vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, bufopts)
+			vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, bufopts)
+			vim.keymap.set("n", "gr", vim.lsp.buf.references, bufopts)
 		end,
 	},
 	{
@@ -40,6 +54,7 @@ return {
 
 		---@module 'blink.cmp'
 		---@type blink.cmp.Config
+
 		config = function()
 			require("blink.cmp").setup({
 
@@ -90,7 +105,6 @@ return {
 				sources = {
 					-- adding any nvim-cmp sources here will enable them
 					-- with blink.compat
-					compat = {},
 					default = { "lsp", "path", "snippets", "buffer" },
 				},
 
@@ -150,7 +164,17 @@ return {
 				javascript = { "eslint_d" },
 			}
 
-			require("mason-nvim-lint").setup()
+			vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost" }, {
+				callback = function()
+					-- try_lint without arguments runs the linters defined in `linters_by_ft`
+					-- for the current filetype
+					require("lint").try_lint()
+
+					-- You can call `try_lint` with a linter name or a list of names to always
+					-- run specific linters, independent of the `linters_by_ft` configuration
+					-- require("lint").try_lint("cspell")
+				end,
+			})
 		end,
 	},
 }

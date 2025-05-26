@@ -1,26 +1,20 @@
 return {
 	{
-		"folke/snacks.nvim",
-		priority = 1000,
-		lazy = false,
-		---@type snacks.Config
+		"lukas-reineke/indent-blankline.nvim",
+		main = "ibl",
+		---@module "ibl"
+		---@type ibl.config
 		opts = {
-			-- your configuration comes here
-			-- or leave it empty to use the default settings
-			-- refer to the configuration section below
-			bigfile = { enabled = true },
-			dashboard = { enabled = true },
-			explorer = { enabled = false },
-			indent = { enabled = true },
-			input = { enabled = true },
-			picker = { enabled = true },
-			notifier = { enabled = true },
-			quickfile = { enabled = true },
-			scope = { enabled = true },
-			scroll = { enabled = true },
-			statuscolumn = { enabled = true },
-			words = { enabled = true },
+			char = "▏",
 		},
+		config = function()
+			require("ibl").setup({
+				debounce = 100,
+				indent = { char = "▏" },
+				whitespace = { highlight = { "Whitespace", "NonText" } },
+				scope = { exclude = { language = { "lua" } } },
+			})
+		end,
 	},
 	{
 		"Aasim-A/scrollEOF.nvim",
@@ -82,5 +76,118 @@ return {
 				return package.loaded["nvim-web-devicons"]
 			end
 		end,
+	},
+	{
+		"folke/trouble.nvim",
+		opts = {}, -- for default options, refer to the configuration section for custom setup.
+		cmd = "Trouble",
+		keys = {
+			{
+				"<leader>xx",
+				"<cmd>Trouble diagnostics toggle<cr>",
+				desc = "Diagnostics (Trouble)",
+			},
+			{
+				"<leader>xX",
+				"<cmd>Trouble diagnostics toggle filter.buf=0<cr>",
+				desc = "Buffer Diagnostics (Trouble)",
+			},
+			{
+				"<leader>cs",
+				"<cmd>Trouble symbols toggle focus=false<cr>",
+				desc = "Symbols (Trouble)",
+			},
+			{
+				"<leader>cl",
+				"<cmd>Trouble lsp toggle focus=false win.position=right<cr>",
+				desc = "LSP Definitions / references / ... (Trouble)",
+			},
+			{
+				"<leader>xL",
+				"<cmd>Trouble loclist toggle<cr>",
+				desc = "Location List (Trouble)",
+			},
+			{
+				"<leader>xQ",
+				"<cmd>Trouble qflist toggle<cr>",
+				desc = "Quickfix List (Trouble)",
+			},
+		},
+	},
+	{
+		"lewis6991/gitsigns.nvim",
+		config = function()
+			require("gitsigns").setup({
+				require("gitsigns").setup({
+					signs = {
+						add = { text = "┃" },
+						change = { text = "┃" },
+						delete = { text = "_" },
+						topdelete = { text = "‾" },
+						changedelete = { text = "~" },
+						untracked = { text = "┆" },
+					},
+					signs_staged = {
+						add = { text = "┃" },
+						change = { text = "┃" },
+						delete = { text = "_" },
+						topdelete = { text = "‾" },
+						changedelete = { text = "~" },
+						untracked = { text = "┆" },
+					},
+					signs_staged_enable = true,
+					signcolumn = true, -- Toggle with `:Gitsigns toggle_signs`
+					numhl = false, -- Toggle with `:Gitsigns toggle_numhl`
+					linehl = false, -- Toggle with `:Gitsigns toggle_linehl`
+					word_diff = false, -- Toggle with `:Gitsigns toggle_word_diff`
+					watch_gitdir = {
+						follow_files = true,
+					},
+					auto_attach = true,
+					attach_to_untracked = false,
+					current_line_blame = true, -- Toggle with `:Gitsigns toggle_current_line_blame`
+					current_line_blame_opts = {
+						virt_text = true,
+						virt_text_pos = "eol", -- 'eol' | 'overlay' | 'right_align'
+						delay = 1000,
+						ignore_whitespace = false,
+						virt_text_priority = 100,
+						use_focus = true,
+					},
+					current_line_blame_formatter = "<author>, <author_time:%R> - <summary>",
+					sign_priority = 6,
+					update_debounce = 100,
+					status_formatter = nil, -- Use default
+					max_file_length = 40000, -- Disable if file is longer than this (in lines)
+					preview_config = {
+						-- Options passed to nvim_open_win
+						style = "minimal",
+						relative = "cursor",
+						row = 0,
+						col = 1,
+					},
+				}),
+			})
+		end,
+	},
+	{
+		"kdheepak/lazygit.nvim",
+		lazy = true,
+		cmd = {
+			"LazyGit",
+			"LazyGitConfig",
+			"LazyGitCurrentFile",
+			"LazyGitFilter",
+			"LazyGitFilterCurrentFile",
+		},
+		-- optional for floating window border decoration
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+		},
+		-- setting the keybinding for LazyGit with 'keys' is recommended in
+		-- order to load the plugin when the command is run for the first time
+		keys = {
+			{ "<leader>lg", "<cmd>LazyGit<cr>", desc = "LazyGit" },
+		},
 	},
 }
