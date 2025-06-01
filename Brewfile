@@ -1,3 +1,4 @@
+tap "felixkratz/formulae"
 tap "homebrew/bundle"
 tap "homebrew/services"
 tap "mongodb/brew"
@@ -12,6 +13,8 @@ brew "bat"
 brew "btop"
 # Cross-platform make
 brew "cmake"
+# More intuitive version of du in rust
+brew "dust"
 # Modern, maintained replacement for ls
 brew "eza"
 # Like neofetch, but much faster because written mostly in C
@@ -50,6 +53,8 @@ brew "tmux"
 brew "tree"
 # Internet file retriever
 brew "wget"
+# A window border system for macOS
+brew "felixkratz/formulae/borders"
 # High-performance, schema-free, document-oriented database
 brew "mongodb/brew/mongodb-community"
 # AeroSpace is an i3-like tiling window manager for macOS
@@ -60,12 +65,14 @@ cask "aldente"
 cask "appcleaner"
 # Desktop password and login vault
 cask "bitwarden"
-# Prevents your sleeping computer from connecting to Bluetooth accessories
-cask "bluesnooze"
 # Anthropic's official Claude AI desktop app
 cask "claude"
 # Voice and text chat software
 cask "discord"
+# Rounds your display corners
+cask "displaperture"
+# App to build and share containerised applications and microservices
+cask "docker"
 # Collaborative team software
 cask "figma"
 cask "font-blex-mono-nerd-font"
@@ -84,10 +91,6 @@ cask "grammarly-desktop"
 cask "hiddenbar"
 # Keyboard customiser
 cask "karabiner-elements"
-# App to write, plan, collaborate, and get organised
-cask "notion"
-# Calendar for professionals and teams
-cask "notion-calendar"
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
 # Collaboration platform for API development
@@ -102,6 +105,8 @@ cask "spotify"
 cask "tableplus"
 # Open-source code editor
 cask "visual-studio-code"
+# Native desktop client for WhatsApp
+cask "whatsapp"
 # Gecko based web browser
 cask "zen"
 # Video communication and virtual meeting platform
