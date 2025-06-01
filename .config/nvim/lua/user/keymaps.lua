@@ -1,12 +1,12 @@
 -- Switch to the next buffer
-vim.api.nvim_set_keymap("n", "H", ":bnext<CR>", {
+vim.api.nvim_set_keymap("n", "H", ":bprev<CR>", {
 	noremap = true,
 	silent = true,
 	desc = "Next Buffer",
 })
 
 -- Switch to the previous buffer
-vim.api.nvim_set_keymap("n", "L", ":bprev<CR>", {
+vim.api.nvim_set_keymap("n", "L", ":bnext<CR>", {
 	noremap = true,
 	silent = true,
 	desc = "Previous Buffer",

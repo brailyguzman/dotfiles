@@ -38,6 +38,8 @@ return {
 			vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, bufopts)
 			vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, bufopts)
 			vim.keymap.set("n", "gr", vim.lsp.buf.references, bufopts)
+
+			vim.diagnostic.config({ virtual_text = true })
 		end,
 	},
 	{
