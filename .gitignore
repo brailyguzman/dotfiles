@@ -11,3 +11,6 @@ alacritty.yml
 .DS_Store
 yarn/
 .config/zed/prompts
+
+.config/pgcli/history
+.config/pgcli/log
