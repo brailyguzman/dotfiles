@@ -7,6 +7,7 @@ plugins=(
     git
     zsh-syntax-highlighting
     zsh-autosuggestions
+    zsh-autopair
 )
 
 source $ZSH/oh-my-zsh.sh
