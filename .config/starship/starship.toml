@@ -9,7 +9,6 @@ add_newline = false
 format = """
 $directory\
 $git_branch\
-$git_state\
 $all\
 $line_break\
 $character"""
@@ -20,12 +19,16 @@ disabled = true
 [line_break]
 disabled = false
 
+[git_state]
+disabled = true
+
 [character]
 success_symbol = "[](bold cyan)"
 error_symbol = "[](bold red)"
 
 [aws]
 symbol = "  "
+disabled = true
 
 [buf]
 symbol = " "
