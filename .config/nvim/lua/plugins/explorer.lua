@@ -30,7 +30,7 @@ return {
 			dotfiles = false,
 			git_ignored = false,
 			-- custom = { "^.git$", "node_modules", "%.cache" },
-			custom = { "^.git$" },
+			custom = { "^.git$", ".obsidian" },
 		},
 		git = {
 			enable = true,
@@ -38,7 +38,7 @@ return {
 			timeout = 400,
 		},
 		view = {
-			adaptive_size = true,
+			adaptive_size = false,
 			side = "left",
 			width = 35,
 			preserve_window_proportions = true,
@@ -47,7 +47,31 @@ return {
 		renderer = {
 			highlight_git = true,
 			highlight_opened_files = "all",
-			root_folder_label = ":~:s?$?/..?",
+			root_folder_label = function(path)
+				local home = vim.loop.os_homedir()
+				local display_path = path
+
+				-- Replace home directory with ~
+				if vim.startswith(path, home) then
+					display_path = "~" .. path:sub(#home + 1)
+				end
+
+				-- Split path into parts
+				local parts = {}
+				for part in string.gmatch(display_path, "[^/]+") do
+					table.insert(parts, part)
+				end
+
+				-- Get last 3 parts (or less)
+				local count = #parts
+				local last_parts = {}
+				for i = math.max(count - 2, 1), count do
+					table.insert(last_parts, parts[i])
+				end
+
+				local short_path = table.concat(last_parts, "/")
+				return string.format("╭─ %s", short_path)
+			end,
 			indent_markers = {
 				enable = true,
 				icons = {
