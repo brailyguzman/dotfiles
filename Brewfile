@@ -29,6 +29,8 @@ brew "gcc"
 brew "go"
 # Improved top (interactive process viewer)
 brew "htop"
+# Lazier way to manage everything docker
+brew "lazydocker"
 # Simple terminal UI for git commands
 brew "lazygit"
 # Linux virtual machines
@@ -47,12 +49,24 @@ brew "rust"
 brew "starship"
 # Organize software neatly under a single directory tree (e.g. /usr/local)
 brew "stow"
+# Tool to build, change, and version infrastructure
+brew "terraform"
+# Simplified and community-driven man pages
+brew "tldr"
 # Terminal multiplexer
 brew "tmux"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
+# Extremely fast Python package installer and resolver, written in Rust
+brew "uv"
 # Internet file retriever
 brew "wget"
+# Auto-close and delete matching delimiters in zsh
+brew "zsh-autopair"
+# Fish-like fast/unobtrusive autosuggestions for zsh
+brew "zsh-autosuggestions"
+# Fish shell like syntax highlighting for zsh
+brew "zsh-syntax-highlighting"
 # A window border system for macOS
 brew "felixkratz/formulae/borders"
 # High-performance, schema-free, document-oriented database
@@ -75,6 +89,7 @@ cask "displaperture"
 cask "docker"
 # Collaborative team software
 cask "figma"
+cask "font-atkinson-hyperlegible"
 cask "font-blex-mono-nerd-font"
 cask "font-hack-nerd-font"
 cask "font-jetbrains-mono-nerd-font"
@@ -95,6 +110,8 @@ cask "karabiner-elements"
 cask "obsidian"
 # Collaboration platform for API development
 cask "postman"
+# Apple Notes extension
+cask "pronotes"
 # Control your tools with a few keystrokes
 cask "raycast"
 # Team communication and collaboration software
@@ -105,9 +122,5 @@ cask "spotify"
 cask "tableplus"
 # Open-source code editor
 cask "visual-studio-code"
-# Native desktop client for WhatsApp
-cask "whatsapp"
-# Gecko based web browser
-cask "zen"
 # Video communication and virtual meeting platform
 cask "zoom"
