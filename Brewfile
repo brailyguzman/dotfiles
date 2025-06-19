@@ -81,6 +81,8 @@ cask "appcleaner"
 cask "bitwarden"
 # Anthropic's official Claude AI desktop app
 cask "claude"
+# Write, edit, and chat about your code with AI
+cask "cursor"
 # Voice and text chat software
 cask "discord"
 # Rounds your display corners

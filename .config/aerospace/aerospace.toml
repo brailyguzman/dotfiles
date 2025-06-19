@@ -59,12 +59,12 @@ automatically-unhide-macos-hidden-apps = true
 #                 See:
 #                 https://nikitabobko.github.io/AeroSpace/guide#assign-workspaces-to-monitors
 [gaps]
-    inner.horizontal = 15
-    inner.vertical =   15
-    outer.left =       15
-    outer.bottom =     15
-    outer.top =        15
-    outer.right =      15
+    inner.horizontal = 5
+    inner.vertical   = 5
+    outer.left       = 8
+    outer.bottom     = 8
+    outer.top        = 8
+    outer.right      = 8
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -234,6 +234,9 @@ automatically-unhide-macos-hidden-apps = true
 # Workspace 3 - Code Editor
 [[on-window-detected]]
     if.app-id = 'com.microsoft.VSCode'
+    run = "move-node-to-workspace 3"
+[[on-window-detected]]
+    if.app-id = 'com.todesktop.230313mzl4w4u92'
     run = "move-node-to-workspace 3"
 
 # Workspace 4 - Docs & Notes
