@@ -21,7 +21,7 @@ cursor-style = "block"
 cursor-style-blink = true
 mouse-hide-while-typing
 
-background = 16161e
+background = 181820
 # background-opacity = 0.75
 # background-blur-radius = 30
 # unfocused-split-opacity = 0.75
