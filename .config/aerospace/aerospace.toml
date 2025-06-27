@@ -257,6 +257,9 @@ automatically-unhide-macos-hidden-apps = true
 [[on-window-detected]]
     if.app-id = 'com.hnc.Discord'
     run = "move-node-to-workspace 5"
+[[on-window-detected]]
+    if.app-id = 'net.whatsapp.WhatsApp'
+    run = "move-node-to-workspace 5"
 
 # Workspace 6 - Dev Tooling
 [[on-window-detected]]
