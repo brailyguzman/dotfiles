@@ -88,7 +88,7 @@ cask "discord"
 # Rounds your display corners
 cask "displaperture"
 # App to build and share containerised applications and microservices
-cask "docker"
+cask "docker-desktop"
 # Collaborative team software
 cask "figma"
 cask "font-atkinson-hyperlegible"
@@ -108,6 +108,8 @@ cask "grammarly-desktop"
 cask "hiddenbar"
 # Keyboard customiser
 cask "karabiner-elements"
+# Calendar for professionals and teams
+cask "notion-calendar"
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
 # Collaboration platform for API development
@@ -124,5 +126,9 @@ cask "spotify"
 cask "tableplus"
 # Open-source code editor
 cask "visual-studio-code"
+# Native desktop client for WhatsApp
+cask "whatsapp"
+# Gecko based web browser
+cask "zen"
 # Video communication and virtual meeting platform
 cask "zoom"
