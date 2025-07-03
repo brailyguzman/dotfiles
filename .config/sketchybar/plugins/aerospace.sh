@@ -1,10 +1,21 @@
 #!/usr/bin/env bash
 
-# make sure it's executable with:
-# chmod +x ~/.config/sketchybar/plugins/aerospace.sh
+source "$CONFIG_DIR/colors.sh"
+
+# Get the focused workspace
+FOCUSED_WORKSPACE=$(aerospace list-workspaces --focused)
 
 if [ "$1" = "$FOCUSED_WORKSPACE" ]; then
-  sketchybar --set $NAME background.drawing=on
+  sketchybar --set $NAME \
+    background.drawing=on \
+    background.color=$ACCENT_COLOR \
+    icon.color=$BAR_COLOR \
+    label.color=$BAR_COLOR \
+    icon.font="SF Pro:Bold:12.0"
 else
-  sketchybar --set $NAME background.drawing=off
+  sketchybar --set $NAME \
+    background.drawing=off \
+    icon.color=$WHITE \
+    label.color=$WHITE \
+    icon.font="SF Pro:Regular:12.0"
 fi
