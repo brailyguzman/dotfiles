@@ -48,12 +48,21 @@ sketchybar --default icon.font="SF Pro:Semibold:15.0" \
 source $ITEM_DIR/spaces.sh
 source $ITEM_DIR/front_app.sh
 
-# -- Right Side Items --
+# -- Center Items --
+# Date & Time
 source $ITEM_DIR/calendar.sh
-source $ITEM_DIR/volume.sh
-source $ITEM_DIR/battery.sh
+
+# -- Right Side Items --
+# Media & Entertainment
+source $ITEM_DIR/media.sh
+
+# System Resources
 source $ITEM_DIR/cpu.sh
 source $ITEM_DIR/ram.sh
+
+# Hardware Status
+source $ITEM_DIR/volume.sh
+source $ITEM_DIR/battery.sh
 
 ##### Finalizing Setup #####
 # The below command is only needed at the end of the initial configuration to

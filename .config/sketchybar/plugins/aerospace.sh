@@ -14,7 +14,8 @@ if [ "$1" = "$FOCUSED_WORKSPACE" ]; then
     icon.font="SF Pro:Bold:12.0"
 else
   sketchybar --set $NAME \
-    background.drawing=off \
+    background.drawing=on \
+    background.color=$ITEM_BG_COLOR \
     icon.color=$WHITE \
     label.color=$WHITE \
     icon.font="SF Pro:Regular:12.0"
