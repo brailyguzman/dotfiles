@@ -2,6 +2,8 @@
 
 sketchybar \
   --add item cpu right \
-  --set cpu update_freq=2 \
+  --set cpu update_freq=5 \
   icon=􀧓 \
-  script="$PLUGIN_DIR/cpu.sh"
+  icon.font="SF Pro:Bold:15.0" \
+  script="$PLUGIN_DIR/cpu.sh" \
+  click_script="open -a 'Activity Monitor'"

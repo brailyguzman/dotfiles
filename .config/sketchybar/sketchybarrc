@@ -21,8 +21,8 @@ sketchybar --bar height=40 \
   blur_radius=30 \
   position=top \
   sticky=off \
-  padding_left=15 \
-  padding_right=15 \
+  padding_left=5 \
+  padding_right=5 \
   color=$BAR_COLOR
 
 ##### Changing Defaults #####
@@ -31,38 +31,44 @@ sketchybar --bar height=40 \
 # https://felixkratz.github.io/SketchyBar/config/items
 
 sketchybar --default icon.font="SF Pro:Semibold:15.0" \
-  icon.color=$WHITE \
+  icon.color=$ACCENT_COLOR \
   label.font="SF Pro:Semibold:15.0" \
   label.color=$WHITE \
   background.color=$ITEM_BG_COLOR \
   background.corner_radius=5 \
   background.height=24 \
+  background.drawing=on \
   padding_left=5 \
   padding_right=5 \
-  label.padding_left=4 \
-  label.padding_right=10 \
-  icon.padding_left=10 \
-  icon.padding_right=4
+  label.align=center \
+  label.padding_left=8 \
+  label.padding_right=8 \
+  icon.padding_left=8 \
+  icon.padding_right= 8
 
 # -- Left Side Items --
+source $ITEM_DIR/apple.sh
 source $ITEM_DIR/spaces.sh
 source $ITEM_DIR/front_app.sh
 
 # -- Center Items --
-# Date & Time
-source $ITEM_DIR/calendar.sh
+# Media & Entertainment
+# source $ITEM_DIR/media.sh
 
 # -- Right Side Items --
-# Media & Entertainment
-source $ITEM_DIR/media.sh
+# Date & Time
+source $ITEM_DIR/calendar.sh
+# Network & Connectivity
+source $ITEM_DIR/wifi.sh
+# source $ITEM_DIR/bluetooth.sh
+
+# Hardware Status
+source $ITEM_DIR/battery.sh
+source $ITEM_DIR/volume.sh
 
 # System Resources
 source $ITEM_DIR/cpu.sh
 source $ITEM_DIR/ram.sh
-
-# Hardware Status
-source $ITEM_DIR/volume.sh
-source $ITEM_DIR/battery.sh
 
 ##### Finalizing Setup #####
 # The below command is only needed at the end of the initial configuration to

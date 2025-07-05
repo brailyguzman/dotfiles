@@ -3,4 +3,7 @@
 sketchybar \
   --add item ram right \
   --set ram update_freq=5 \
-  script="$PLUGIN_DIR/ram.sh"
+  icon="􀫦" \
+  icon.font="SF Pro:Bold:15.0" \
+  script="$PLUGIN_DIR/ram.sh" \
+  click_script="open -a 'Activity Monitor'"
