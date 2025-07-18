@@ -12,7 +12,6 @@ for sid in $(aerospace list-workspaces --all); do
     label.align=center \
     label.padding_left=8 \
     label.padding_right=8 \
-    label.offset=0 \
     icon.drawing=off \
     background.corner_radius=5 \
     background.height=24 \

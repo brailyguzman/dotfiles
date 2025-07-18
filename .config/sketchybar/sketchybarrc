@@ -50,16 +50,15 @@ sketchybar --default icon.font="SF Pro:Semibold:15.0" \
 source $ITEM_DIR/apple.sh
 source $ITEM_DIR/spaces.sh
 source $ITEM_DIR/front_app.sh
-
 # -- Center Items --
 # Media & Entertainment
-# source $ITEM_DIR/media.sh
+source $ITEM_DIR/media.sh
 
 # -- Right Side Items --
 # Date & Time
 source $ITEM_DIR/calendar.sh
 # Network & Connectivity
-source $ITEM_DIR/wifi.sh
+# source $ITEM_DIR/wifi.sh
 # source $ITEM_DIR/bluetooth.sh
 
 # Hardware Status

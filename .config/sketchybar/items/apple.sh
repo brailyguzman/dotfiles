@@ -3,7 +3,7 @@
 sketchybar \
   --add item apple left \
   --set apple icon="􀣺" \
-  icon.font="SF Pro:Bold:16.0" \
+  icon.font="SF Pro:Bold:18.0" \
   icon.color=$ACCENT_COLOR \
   label.drawing=off \
   background.color=$ITEM_BG_COLOR \

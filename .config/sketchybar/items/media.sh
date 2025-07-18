@@ -8,5 +8,5 @@ sketchybar --add item media center \
   label.max_chars=20 \
   label.padding_right=8 \
   scroll_texts=off \
-  background.drawing=off \
+  background.drawing=on \
   script="$PLUGIN_DIR/media.sh"
