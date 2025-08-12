@@ -9,7 +9,14 @@ after-login-command = []
 # You can use it to add commands that run after AeroSpace startup.
 # 'after-startup-command' is run after 'after-login-command'
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
-after-startup-command = []
+# after-startup-command = [
+#   "exec-and-forget sketchybar --trigger aerospace_startup",
+# ]
+#
+# exec-on-workspace-change = ['/bin/bash', '-c',
+#     'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE'
+# ]
+
 
 # Start AeroSpace at login
 start-at-login = true
@@ -36,7 +43,7 @@ default-root-container-orientation = 'auto'
 # See https://nikitabobko.github.io/AeroSpace/guide#on-focus-changed-callbacks
 # See https://nikitabobko.github.io/AeroSpace/commands#move-mouse
 # Fallback value (if you omit the key): on-focused-monitor-changed = []
-on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
+# on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 
 # You can effectively turn off macOS "Hide application" (cmd-h) feature by toggling this flag
 # Useful if you don't use this macOS feature, but accidentally hit cmd-h or cmd-alt-h key
@@ -59,10 +66,11 @@ automatically-unhide-macos-hidden-apps = true
 [gaps]
     inner.horizontal = 10
     inner.vertical   = 10
-    outer.left       = 15
+    outer.left       = 5
     outer.bottom     = 10
+    # outer.top        = 55
     outer.top        = 10
-    outer.right      = 15
+    outer.right      = 5
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -159,7 +167,7 @@ automatically-unhide-macos-hidden-apps = true
     alt-shift-7 = 'move-node-to-workspace 7'
     alt-shift-8 = 'move-node-to-workspace 8'
     alt-shift-9 = 'move-node-to-workspace 9'
-    alt-shift-0 = 'move-node-to-workspace 10'
+    # alt-shift-0 = 'move-node-to-workspace 10'
     # alt-shift-a = 'move-node-to-workspace A
     # alt-shift-b = 'move-node-to-workspace B'
     # alt-shift-c = 'move-node-to-workspace C'
@@ -219,6 +227,9 @@ automatically-unhide-macos-hidden-apps = true
     run = "move-node-to-workspace 1"
 [[on-window-detected]]
     if.app-id = 'app.zen-browser.zen'
+    run = "move-node-to-workspace 1"
+[[on-window-detected]]
+    if.app-id = 'company.thebrowser.Browser'
     run = "move-node-to-workspace 1"
 
 # Workspace 2 - Terminal
@@ -294,3 +305,8 @@ automatically-unhide-macos-hidden-apps = true
 [[on-window-detected]]
     if.app-id = 'us.zoom.xos'
     run = "move-node-to-workspace 9"
+
+[[on-window-detected]]
+if.app-id = 'com.timpler.screenstudio'
+check-further-callbacks = true
+run = 'layout floating'
