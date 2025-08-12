@@ -1,0 +1,31 @@
+# Tokyo City theme for Ghostty
+
+# ANSI colors (0-15)
+palette = 0=#41505e
+palette = 1=#d95468
+palette = 2=#8bd49c
+palette = 3=#ebbf83
+palette = 4=#539afc
+palette = 5=#b62d65
+palette = 6=#70e1e8
+palette = 7=#ffffff
+palette = 8=#41505e
+palette = 9=#d95468
+palette = 10=#8bd49c
+palette = 11=#ebbf83
+palette = 12=#539afc
+palette = 13=#b62d65
+palette = 14=#70e1e8
+palette = 15=#ffffff
+
+# Background and foreground
+background = #080c14
+foreground = #d8e2ec
+
+# Cursor
+cursor-color = #5ec4ff
+cursor-text = #080c14
+
+# Selection
+selection-background = #28323a
+selection-foreground = #d8e2ec
