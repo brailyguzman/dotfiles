@@ -29,6 +29,8 @@ brew "gcc"
 brew "go"
 # Improved top (interactive process viewer)
 brew "htop"
+# Lightweight and flexible command-line JSON processor
+brew "jq"
 # Lazier way to manage everything docker
 brew "lazydocker"
 # Simple terminal UI for git commands
@@ -67,8 +69,8 @@ brew "zsh-autopair"
 brew "zsh-autosuggestions"
 # Fish shell like syntax highlighting for zsh
 brew "zsh-syntax-highlighting"
-# A window border system for macOS
-brew "felixkratz/formulae/borders"
+# Custom macOS statusbar with shell plugin, interaction and graph support
+brew "felixkratz/formulae/sketchybar"
 # High-performance, schema-free, document-oriented database
 brew "mongodb/brew/mongodb-community"
 # AeroSpace is an i3-like tiling window manager for macOS
@@ -77,6 +79,8 @@ cask "aerospace"
 cask "aldente"
 # Application uninstaller
 cask "appcleaner"
+# Chromium based browser
+cask "arc"
 # Desktop password and login vault
 cask "bitwarden"
 # Anthropic's official Claude AI desktop app
@@ -93,9 +97,13 @@ cask "docker-desktop"
 cask "figma"
 cask "font-atkinson-hyperlegible"
 cask "font-blex-mono-nerd-font"
+cask "font-geist-mono-nerd-font"
 cask "font-hack-nerd-font"
 cask "font-jetbrains-mono-nerd-font"
 cask "font-maple-mono-nf"
+cask "font-sf-mono"
+cask "font-sf-mono-nerd-font-ligaturized"
+cask "font-sf-pro"
 # Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
 # Web browser
@@ -108,8 +116,12 @@ cask "grammarly-desktop"
 cask "hiddenbar"
 # Keyboard customiser
 cask "karabiner-elements"
+# App to write, plan, collaborate, and get organised
+cask "notion"
 # Calendar for professionals and teams
 cask "notion-calendar"
+# Email client integrated with Notion workspace
+cask "notion-mail"
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
 # Collaboration platform for API development
@@ -118,6 +130,10 @@ cask "postman"
 cask "pronotes"
 # Control your tools with a few keystrokes
 cask "raycast"
+# Screen recorder and editor
+cask "screen-studio"
+# Tool that provides consistent, highly configurable symbols for apps
+cask "sf-symbols"
 # Team communication and collaboration software
 cask "slack"
 # Music streaming service
@@ -126,8 +142,12 @@ cask "spotify"
 cask "tableplus"
 # Open-source code editor
 cask "visual-studio-code"
+# JavaScript IDE
+cask "webstorm"
 # Native desktop client for WhatsApp
 cask "whatsapp"
+# Multiplayer code editor
+cask "zed"
 # Gecko based web browser
 cask "zen"
 # Video communication and virtual meeting platform
