@@ -10,10 +10,10 @@ alias vi="nvim"
 alias vim="nvim"
 
 # Eza (ls replacement)
-alias ls="eza --icons --group --header --grid --sort=type"
-alias ll="eza --long --icons --group --header --sort=size"
-alias lt="eza --tree --level=2 --icons"
-alias la="eza --all --icons --group --header"
+alias ls="eza --group --header --grid --sort=type"
+alias ll="eza --long --group --header --sort=size"
+alias lt="eza --tree --level=2"
+alias la="eza --all --group --header"
 
 # Misc
 alias reload="source ~/.zshrc"
