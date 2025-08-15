@@ -167,57 +167,6 @@ return {
 			return require("tmux").setup()
 		end,
 	},
-	{
-		"folke/snacks.nvim",
-		priority = 1000,
-		lazy = false,
-		---@type snacks.Config
-		opts = {
-			-- your configuration comes here
-			-- or leave it empty to use the default settings
-			-- refer to the configuration section below
-			image = { enabled = true },
-			bigfile = { enabled = true },
-			dashboard = { enabled = true },
-			explorer = { enabled = false },
-			indent = {
-				enabled = true,
-				treesitter = { enabled = true },
-			},
-			input = { enabled = false },
-			picker = { enabled = false },
-			notifier = { enabled = false },
-			quickfile = { enabled = false },
-			scope = {
-				enabled = true,
-				cursor = false,
-				treesitter = {
-					enabled = true,
-					-- blocks = {
-					-- 	"chunk",
-					-- 	"table_constructor",
-					-- 	"function_declaration",
-					-- 	"function_definition",
-					-- 	"method_declaration",
-					-- 	"method_definition",
-					-- 	"class_declaration",
-					-- 	"class_definition",
-					-- 	"do_statement",
-					-- 	"while_statement",
-					-- 	"repeat_statement",
-					-- 	"switch_statement",
-					-- 	"case_statement",
-					-- 	"if_statement",
-					-- 	"for_statement",
-					-- 	"arguments",
-					-- },
-				},
-			},
-			scroll = { enabled = true },
-			statuscolumn = { enabled = true },
-			words = { enabled = true },
-		},
-	},
 	{ "wakatime/vim-wakatime", lazy = false },
 	{
 		"zbirenbaum/copilot.lua",
@@ -226,11 +175,11 @@ return {
 		event = "BufReadPost",
 		opts = {
 			suggestion = {
-				enabled = not vim.g.ai_cmp,
+				enabled = true,
 				auto_trigger = true,
-				hide_during_completion = vim.g.ai_cmp,
+				hide_during_completion = false,
 				keymap = {
-					accept = false, -- handled by nvim-cmp / blink.cmp
+					accept = "<Tab>",
 					next = "<M-]>",
 					prev = "<M-[>",
 				},
@@ -241,5 +190,19 @@ return {
 				help = true,
 			},
 		},
+	},
+	{
+		"shellRaining/hlchunk.nvim",
+		event = { "BufReadPre", "BufNewFile" },
+		config = function()
+			require("hlchunk").setup({
+				chunk = {
+					enable = false,
+				},
+				indent = {
+					enable = true,
+				},
+			})
+		end,
 	},
 }
