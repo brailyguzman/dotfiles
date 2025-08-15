@@ -1,22 +1,5 @@
 return {
 	{
-		"lukas-reineke/indent-blankline.nvim",
-		main = "ibl",
-		---@module "ibl"
-		---@type ibl.config
-		opts = {
-			char = "▏",
-		},
-		config = function()
-			require("ibl").setup({
-				debounce = 100,
-				indent = { char = "▏" },
-				whitespace = { highlight = { "Whitespace", "NonText" } },
-				scope = { exclude = { language = { "lua" } } },
-			})
-		end,
-	},
-	{
 		"Aasim-A/scrollEOF.nvim",
 		event = { "CursorMoved", "WinScrolled" },
 		opts = {},
@@ -25,32 +8,20 @@ return {
 		end,
 	},
 	{
-		"windwp/nvim-autopairs",
-		event = "InsertEnter",
-		config = true,
-		-- use opts = {} for passing setup options
-		-- this is equivalent to setup({}) function
-	},
-	{
-		"windwp/nvim-ts-autotag",
-		config = function()
-			require("nvim-ts-autotag").setup({
-				opts = {
-					-- Defaults
-					enable_close = true, -- Auto close tags
-					enable_rename = true, -- Auto rename pairs of tags
-					enable_close_on_slash = false, -- Auto close on trailing </
-				},
-				-- Also override individual filetype configs, these take priority.
-				-- Empty by default, useful if one of the "opts" global settings
-				-- doesn't work well in a specific filetype
-				per_filetype = {
-					["html"] = {
-						enable_close = false,
-					},
-				},
-			})
-		end,
+		"echasnovski/mini.pairs",
+		event = "VeryLazy",
+		opts = {
+			modes = { insert = true, command = true, terminal = false },
+			-- skip autopair when next character is one of these
+			skip_next = [=[[%w%%%'%[%"%.%`%$]]=],
+			-- skip autopair when the cursor is inside these treesitter nodes
+			skip_ts = { "string" },
+			-- skip autopair when next character is closing pair
+			-- and there are more closing pairs than opening pairs
+			skip_unbalanced = true,
+			-- better deal with markdown code blocks
+			markdown = true,
+		},
 	},
 	{
 		"folke/ts-comments.nvim",
@@ -197,13 +168,78 @@ return {
 		end,
 	},
 	{
-		"MeanderingProgrammer/render-markdown.nvim",
-		after = { "nvim-treesitter" },
-		requires = { "echasnovski/mini.nvim", opt = true }, -- if you use the mini.nvim suite
-		-- requires = { 'echasnovski/mini.icons', opt = true }, -- if you use standalone mini plugins
-		-- requires = { 'nvim-tree/nvim-web-devicons', opt = true }, -- if you prefer nvim-web-devicons
-		config = function()
-			require("render-markdown").setup({})
-		end,
+		"folke/snacks.nvim",
+		priority = 1000,
+		lazy = false,
+		---@type snacks.Config
+		opts = {
+			-- your configuration comes here
+			-- or leave it empty to use the default settings
+			-- refer to the configuration section below
+			image = { enabled = true },
+			bigfile = { enabled = true },
+			dashboard = { enabled = true },
+			explorer = { enabled = false },
+			indent = {
+				enabled = true,
+				treesitter = { enabled = true },
+			},
+			input = { enabled = false },
+			picker = { enabled = false },
+			notifier = { enabled = false },
+			quickfile = { enabled = false },
+			scope = {
+				enabled = true,
+				cursor = false,
+				treesitter = {
+					enabled = true,
+					-- blocks = {
+					-- 	"chunk",
+					-- 	"table_constructor",
+					-- 	"function_declaration",
+					-- 	"function_definition",
+					-- 	"method_declaration",
+					-- 	"method_definition",
+					-- 	"class_declaration",
+					-- 	"class_definition",
+					-- 	"do_statement",
+					-- 	"while_statement",
+					-- 	"repeat_statement",
+					-- 	"switch_statement",
+					-- 	"case_statement",
+					-- 	"if_statement",
+					-- 	"for_statement",
+					-- 	"arguments",
+					-- },
+				},
+			},
+			scroll = { enabled = true },
+			statuscolumn = { enabled = true },
+			words = { enabled = true },
+		},
+	},
+	{ "wakatime/vim-wakatime", lazy = false },
+	{
+		"zbirenbaum/copilot.lua",
+		cmd = "Copilot",
+		build = ":Copilot auth",
+		event = "BufReadPost",
+		opts = {
+			suggestion = {
+				enabled = not vim.g.ai_cmp,
+				auto_trigger = true,
+				hide_during_completion = vim.g.ai_cmp,
+				keymap = {
+					accept = false, -- handled by nvim-cmp / blink.cmp
+					next = "<M-]>",
+					prev = "<M-[>",
+				},
+			},
+			panel = { enabled = false },
+			filetypes = {
+				markdown = true,
+				help = true,
+			},
+		},
 	},
 }

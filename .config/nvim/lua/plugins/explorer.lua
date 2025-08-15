@@ -47,30 +47,34 @@ return {
 		renderer = {
 			highlight_git = true,
 			highlight_opened_files = "all",
+			-- root_folder_label = function(path)
+			-- 	local home = vim.loop.os_homedir()
+			-- 	local display_path = path
+			--
+			-- 	-- Replace home directory with ~
+			-- 	if vim.startswith(path, home) then
+			-- 		display_path = "~" .. path:sub(#home + 1)
+			-- 	end
+			--
+			-- 	-- Split path into parts
+			-- 	local parts = {}
+			-- 	for part in string.gmatch(display_path, "[^/]+") do
+			-- 		table.insert(parts, part)
+			-- 	end
+			--
+			-- 	-- Get last 3 parts (or less)
+			-- 	local count = #parts
+			-- 	local last_parts = {}
+			-- 	for i = math.max(count - 2, 1), count do
+			-- 		table.insert(last_parts, parts[i])
+			-- 	end
+			--
+			-- 	local short_path = table.concat(last_parts, "/")
+			-- 	return string.format("╭─ %s", short_path)
+			-- end,
 			root_folder_label = function(path)
-				local home = vim.loop.os_homedir()
-				local display_path = path
-
-				-- Replace home directory with ~
-				if vim.startswith(path, home) then
-					display_path = "~" .. path:sub(#home + 1)
-				end
-
-				-- Split path into parts
-				local parts = {}
-				for part in string.gmatch(display_path, "[^/]+") do
-					table.insert(parts, part)
-				end
-
-				-- Get last 3 parts (or less)
-				local count = #parts
-				local last_parts = {}
-				for i = math.max(count - 2, 1), count do
-					table.insert(last_parts, parts[i])
-				end
-
-				local short_path = table.concat(last_parts, "/")
-				return string.format("╭─ %s", short_path)
+				local name = vim.fn.fnamemodify(path, ":t") -- just the folder name
+				return string.format("╭─ %s", name)
 			end,
 			indent_markers = {
 				enable = true,

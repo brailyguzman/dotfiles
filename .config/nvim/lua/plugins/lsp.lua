@@ -23,6 +23,8 @@ return {
 				lspconfig[server].setup({
 					capabilities = capabilities,
 				})
+
+				vim.lsp.config(server, capabilities)
 			end
 
 			local bufopts = { noremap = true }
@@ -39,7 +41,30 @@ return {
 			vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, bufopts)
 			vim.keymap.set("n", "gr", vim.lsp.buf.references, bufopts)
 
-			vim.diagnostic.config({ virtual_text = true })
+			-- vim.diagnostic.config({ virtual_text = true })
+
+			vim.diagnostic.config({
+				virtual_text = true,
+				underline = true,
+				update_in_insert = true,
+				severity_sort = true,
+				float = {
+					border = "rounded",
+					source = true,
+				},
+				signs = {
+					text = {
+						[vim.diagnostic.severity.ERROR] = "󰅚 ",
+						[vim.diagnostic.severity.WARN] = "󰀪 ",
+						[vim.diagnostic.severity.INFO] = "󰋽 ",
+						[vim.diagnostic.severity.HINT] = "󰌶 ",
+					},
+					numhl = {
+						[vim.diagnostic.severity.ERROR] = "ErrorMsg",
+						[vim.diagnostic.severity.WARN] = "WarningMsg",
+					},
+				},
+			})
 		end,
 	},
 	{
@@ -93,14 +118,36 @@ return {
 					},
 					menu = {
 						draw = {
-							treesitter = { "lsp" },
+							components = {
+								kind_icon = {
+									text = function(ctx)
+										local kind_icon, _, _ = require("mini.icons").get("lsp", ctx.kind)
+										return kind_icon
+									end,
+									-- (optional) use highlights from mini.icons
+									highlight = function(ctx)
+										local _, hl, _ = require("mini.icons").get("lsp", ctx.kind)
+										return hl
+									end,
+								},
+								kind = {
+									-- (optional) use highlights from mini.icons
+									highlight = function(ctx)
+										local _, hl, _ = require("mini.icons").get("lsp", ctx.kind)
+										return hl
+									end,
+								},
+							},
 						},
 					},
+					list = { selection = { preselect = false, auto_insert = true } },
 					documentation = {
 						auto_show = true,
 						auto_show_delay_ms = 200,
 					},
 				},
+
+				signature = { enabled = true },
 
 				-- Default list of enabled providers defined so that you can extend it
 				-- elsewhere in your config, without redefining it, due to `opts_extend`
@@ -162,7 +209,7 @@ return {
 		},
 		config = function()
 			require("lint").linters_by_ft = {
-				markdown = { "vale" },
+				-- markdown = { "vale" },
 				javascript = { "eslint_d" },
 			}
 
